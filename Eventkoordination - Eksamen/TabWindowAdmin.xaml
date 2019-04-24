@@ -11,7 +11,7 @@
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="TabItem">
+            <TabItem Header="Event">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
