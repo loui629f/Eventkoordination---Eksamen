@@ -6,13 +6,15 @@
         xmlns:local="clr-namespace:Eventkoordination___Eksamen"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid RenderTransformOrigin="0.398,0.487">
 
-        <TextBox Name="Brugernavntxtbox" HorizontalAlignment="Left" Height="42" Margin="291,111,0,0" TextWrapping="Wrap" Text="Brugernavn" FontSize="20" VerticalAlignment="Top" Width="188" TextChanged="Brugernavntxtbox_TextChanged"/>
-        <TextBox Name="Adgangskodetxtbox" HorizontalAlignment="Left" Height="42" Margin="291,211,0,0" TextWrapping="Wrap" Text="Adgangskode" FontSize="20" VerticalAlignment="Top" Width="188" TextChanged="Adgangskodetxtbox_TextChanged"/>
+        <TextBox Name="Brugernavntxtbox" HorizontalAlignment="Left" Height="42" Margin="420,111,0,0" TextWrapping="Wrap" FontSize="33" VerticalAlignment="Top" Width="188" TextChanged="Brugernavntxtbox_TextChanged"/>
         <Label Content="Log ind" FontSize="30" HorizontalAlignment="Left" Margin="323,27,0,0" VerticalAlignment="Top" Height="57" Width="118"/>
         <Button Name="Logindbtn" Content="Log ind" HorizontalAlignment="Left" Margin="346,297,0,0" VerticalAlignment="Top" Width="75" Click="Logindbtn_Click"/>
-       
+        <PasswordBox Name = "Adgangskodepasbox" FontSize="33" HorizontalAlignment="Left" Height="42" Margin="420,211,0,0"  VerticalAlignment="Top" Width="188"/>
+        <Label Content="Brugernavn" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="248,111,0,0" Height="42" Width="119"/>
+        <Label Content="Adgangskode" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="248,211,0,0" Height="49" Width="136"/>
+
 
     </Grid>
 </Window>
