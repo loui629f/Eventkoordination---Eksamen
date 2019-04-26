@@ -35,5 +35,11 @@ namespace Eventkoordination___Eksamen
             Vagt vagter = new Vagt();
             vagter.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            OpretEvent opretEvent = new OpretEvent();
+            opretEvent.Show();
+        }
     }
 }
