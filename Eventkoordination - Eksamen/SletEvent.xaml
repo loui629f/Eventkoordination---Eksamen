@@ -8,8 +8,8 @@
         Title="SletEvent" Height="158.55" Width="200">
     <Grid Margin="0,0,423,276">
         <Label Content="Slet Event?" HorizontalAlignment="Left" Height="25" Margin="66,59,-134,-84" VerticalAlignment="Top" Width="68"/>
-        <Button Content="Ja" HorizontalAlignment="Left" Height="30" Margin="26,84,-76,-114" VerticalAlignment="Top" Width="50" Click="Button_Click"/>
-        <Button Content="Nej" HorizontalAlignment="Left" Height="30" Margin="119,84,-169,-114" VerticalAlignment="Top" Width="50" Click="Button_Click_1"/>
+        <Button Content="Ja" HorizontalAlignment="Left" Height="30" Margin="26,84,-76,-114" VerticalAlignment="Top" Width="50" Click="BtnClickJa"/>
+        <Button Content="Nej" HorizontalAlignment="Left" Height="30" Margin="119,84,-169,-114" VerticalAlignment="Top" Width="50" Click="BtnClickNej"/>
 
     </Grid>
 </Window>

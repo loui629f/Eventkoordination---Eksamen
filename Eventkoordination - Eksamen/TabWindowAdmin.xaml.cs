@@ -24,22 +24,27 @@ namespace Eventkoordination___Eksamen
 			InitializeComponent();
 		}
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnClickSlet(object sender, RoutedEventArgs e)
         {
             SletEvent sletEvent = new SletEvent();
             sletEvent.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BtnClickVagter(object sender, RoutedEventArgs e)
         {
             Vagt vagter = new Vagt();
             vagter.Show();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void BtnClickOpretEvent(object sender, RoutedEventArgs e)
         {
             OpretEvent opretEvent = new OpretEvent();
             opretEvent.Show();
+        }
+
+        private void BtnClickKomment(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

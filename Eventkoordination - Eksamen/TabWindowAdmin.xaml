@@ -18,7 +18,7 @@
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0" Click="Button_Click_2"/>
+                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0" Click="BtnClickOpretEvent"/>
                     <RichTextBox HorizontalAlignment="Left" Height="100" Margin="10,252,0,0" VerticalAlignment="Top" Width="346">
                         <FlowDocument>
                             <Paragraph>
@@ -26,9 +26,9 @@
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="257,50,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="257,170,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="257,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="257,170,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Event">

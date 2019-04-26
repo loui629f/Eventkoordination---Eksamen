@@ -24,15 +24,13 @@ namespace Eventkoordination___Eksamen
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnClickJa(object sender, RoutedEventArgs e)
         {
-            SletEvent sletEvent = new SletEvent();
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BtnClickNej(object sender, RoutedEventArgs e)
         {
-            SletEvent sletEvent = new SletEvent();
             this.Close();
         }
     }

@@ -24,12 +24,17 @@ namespace Eventkoordination___Eksamen
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnClickEmail(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BtnClickAnnuller(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BtnClickLuk(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
