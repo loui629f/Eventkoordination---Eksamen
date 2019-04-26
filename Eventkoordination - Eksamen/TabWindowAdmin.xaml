@@ -34,6 +34,38 @@
             <TabItem Header="Event">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
+            <TabItem Header="Vagt">
+                <Grid Background="#FFE5E5E5">
+                    <Frame Content="Begivenhed - Dag 1" HorizontalAlignment="Left" Height="178" VerticalAlignment="Top" Width="263" Margin="100,116,0,0"/>
+                    <Label Content="14:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,186,0,0"/>
+                    <Label Content="12:00" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="3.711,6.577" Margin="122,160,0,0"/>
+                    <Label Content="16:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,212,0,0"/>
+                    <Label Content="18:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,238,0,0"/>
+                    <Label Content="20:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,264,0,0"/>
+                    <Label Content="10:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,134,0,0"/>
+                    <Label Content="Vagt 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="271,134,0,0"/>
+                    <Label Content="Vagt 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="271,160,0,0"/>
+                    <Label Content="Vagt 3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="271,186,0,0"/>
+                    <Label Content="Vagt 4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="271,212,0,0"/>
+                    <Label Content="Vagt 5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="271,238,0,0"/>
+                    <Label Content="Vagt 6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="271,264,0,0"/>
+                    <ScrollBar HorizontalAlignment="Left" Margin="346,116,0,0" VerticalAlignment="Top" Height="178"/>
+                    <Frame Content="Begivenhed - Dag 1" HorizontalAlignment="Left" Height="178" VerticalAlignment="Top" Width="263" Margin="442,112,0,0"/>
+                    <ScrollBar HorizontalAlignment="Left" Margin="688,112,0,0" VerticalAlignment="Top" Height="178"/>
+                    <Label Content="10:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,134,0,0" RenderTransformOrigin="0.421,-0.462"/>
+                    <Label Content="Vagt 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="618,134,0,0"/>
+                    <Label Content="12:00" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="3.711,6.577" Margin="462,160,0,0"/>
+                    <Label Content="14:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,186,0,0"/>
+                    <Label Content="16:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,212,0,0"/>
+                    <Label Content="18:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,238,0,0"/>
+                    <Label Content="20:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="462,264,0,0"/>
+                    <Label Content="Vagt 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="618,160,0,0"/>
+                    <Label Content="Vagt 3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="618,186,0,0"/>
+                    <Label Content="Vagt 4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="618,212,0,0"/>
+                    <Label Content="Vagt 5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="618,238,0,0"/>
+                    <Label Content="Vagt 6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="618,264,0,0"/>
+                </Grid>
+            </TabItem>
         </TabControl>
 
     </Grid>
