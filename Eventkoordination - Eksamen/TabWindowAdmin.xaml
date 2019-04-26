@@ -8,8 +8,28 @@
         Title="TabWindowAdmin" Height="450" Width="800">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="422" Margin="-3,-1,0,-0.333" VerticalAlignment="Top" Width="796">
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="News">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox HorizontalAlignment="Left" Height="164" Margin="10,50,0,0" VerticalAlignment="Top" Width="346" HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="NewsFeed"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0"/>
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="10,252,0,0" VerticalAlignment="Top" Width="346">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="Kommentar Felt"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="257,50,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="257,170,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Event">
                 <Grid Background="#FFE5E5E5">

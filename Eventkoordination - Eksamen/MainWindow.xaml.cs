@@ -38,7 +38,9 @@ namespace Eventkoordination___Eksamen
 
         private void Logindbtn_Click(object sender, RoutedEventArgs e)
         {
-
+            TabWindowAdmin tabs = new TabWindowAdmin();
+            tabs.Show();
+            this.Close();
         }
     }
 }
