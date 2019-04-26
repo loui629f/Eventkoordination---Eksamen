@@ -14,26 +14,26 @@ using System.Windows.Shapes;
 
 namespace Eventkoordination___Eksamen
 {
-	/// <summary>
-	/// Interaction logic for TabWindowAdmin.xaml
-	/// </summary>
-	public partial class TabWindowAdmin : Window
-	{
-		public TabWindowAdmin()
-		{
-			InitializeComponent();
-		}
+    /// <summary>
+    /// Interaction logic for SletEvent.xaml
+    /// </summary>
+    public partial class SletEvent : Window
+    {
+        public SletEvent()
+        {
+            InitializeComponent();
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SletEvent sletEvent = new SletEvent();
-            sletEvent.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Vagt vagter = new Vagt();
-            vagter.Show();
+            SletEvent sletEvent = new SletEvent();
+            this.Close();
         }
     }
 }

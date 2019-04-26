@@ -24,5 +24,22 @@ namespace Eventkoordination___Eksamen
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Brugernavntxtbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Adgangskodetxtbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Logindbtn_Click(object sender, RoutedEventArgs e)
+        {
+            TabWindowAdmin LogInd = new TabWindowAdmin();
+            LogInd.Show();
+            this.Close();
+        }
+    }
 }
