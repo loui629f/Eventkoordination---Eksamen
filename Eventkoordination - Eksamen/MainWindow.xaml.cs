@@ -24,5 +24,10 @@ namespace Eventkoordination___Eksamen
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Logindbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
 }

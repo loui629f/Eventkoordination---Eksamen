@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Eventkoordination___Eksamen"
-        mc:Ignorable="d"
+        xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         Title="TabWindowAdmin" Height="450" Width="800">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="422" Margin="-3,-1,0,-0.333" VerticalAlignment="Top" Width="796">
@@ -13,6 +14,36 @@
             </TabItem>
             <TabItem Header="Event">
                 <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Statistik">
+                <Grid Background="#FFE5E5E5">
+                    
+                    
+                   
+
+                    <Label Content= "Frivillige" FontSize="15" HorizontalAlignment="Left" Margin="56,79,0,0" VerticalAlignment="Top" Width="80"/>
+                    <Label Content="Aktive" FontSize="15"  HorizontalAlignment="Left" Margin="56,157,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="-0.041,0.528"/>
+                    <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="141,84,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.535,1.713"/>
+                    <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="141,162,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.535,1.562"/>
+
+
+                    
+                    <DVC:Chart Canvas.Top="80" Canvas.Left="10" Name="mcChart" Width="400" Height="250" Background="LightSteelBlue" Margin="322,51,68,93">
+                        <DVC:Chart.DataContext>
+                            <local:TabWindowAdmin/>
+                        </DVC:Chart.DataContext>
+                        
+                        <DVC:Chart.Series>
+                            <DVC:PieSeries ItemsSource="{Binding Mode=OneWay}" DependentValuePath="Share" IndependentValuePath="Name" DataContext="{Binding Mode=OneWay}" >
+                            </DVC:PieSeries>
+                        </DVC:Chart.Series>
+                    </DVC:Chart>
+
+
+
+
+                </Grid>
+             
             </TabItem>
         </TabControl>
 
