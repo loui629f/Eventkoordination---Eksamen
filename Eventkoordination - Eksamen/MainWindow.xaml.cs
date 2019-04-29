@@ -13,34 +13,37 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Eventkoordination___Eksamen
-{
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
+
+    namespace Eventkoordination___Eksamen
+    {
+        /// <summary>
+        /// Interaction logic for MainWindow.xaml
+        /// </summary>
+        public partial class MainWindow : Window
+        {
+
+            public MainWindow()
+            {
+                InitializeComponent();
+            }
        
-		public MainWindow()
-		{
-			InitializeComponent();
-		}
 
-        private void Brugernavntxtbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+            private void Brugernavntxtbox_TextChanged(object sender, TextChangedEventArgs e)
+            {
 
-        }
+            }
 
-        private void Adgangskodetxtbox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-           
-        }
+            private void Adgangskodetxtbox_TextChanged(object sender, TextChangedEventArgs e)
+            {
 
-        private void Logindbtn_Click(object sender, RoutedEventArgs e)
-        {
-            TabWindowAdmin tabs = new TabWindowAdmin();
-            tabs.Show();
-            this.Close();
+            }
+
+            private void Logindbtn_Click(object sender, RoutedEventArgs e)
+            {
+                TabWindowAdmin tabs = new TabWindowAdmin();
+                tabs.Show();
+                this.Close();
+            }
         }
     }
-}
+
