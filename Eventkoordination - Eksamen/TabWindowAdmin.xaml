@@ -111,7 +111,7 @@
                     
                     <DVC:Chart Canvas.Top="80" Canvas.Left="10" Name="mcChart" Width="400" Height="250" Background="LightSteelBlue" Margin="322,51,68,93">
                         <DVC:Chart.DataContext>
-                            <local:TabWindowAdmin/>
+                            <local:StatistikCollection/>
                         </DVC:Chart.DataContext>
                         
                         <DVC:Chart.Series>

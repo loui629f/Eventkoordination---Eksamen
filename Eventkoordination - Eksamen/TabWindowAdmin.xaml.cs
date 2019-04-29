@@ -19,10 +19,21 @@ namespace Eventkoordination___Eksamen
 	/// </summary>
 	public partial class TabWindowAdmin : Window
 	{
-		public TabWindowAdmin()
+        StatistikCollection StatistikCollection1;
+        public TabWindowAdmin()
 		{
 			InitializeComponent();
-		}
+
+            StatistikCollection1 = new StatistikCollection();
+
+            StatistikCollection1.Add(new Statistik { Name = "Oprydning", Share = 10 });
+            StatistikCollection1.Add(new Statistik { Name = "Fest", Share = 35 });
+            StatistikCollection1.Add(new Statistik { Name = "Fest", Share = 35 });
+            StatistikCollection1.Add(new Statistik { Name = "Opstilling", Share = 10 });
+            StatistikCollection1.Add(new Statistik { Name = "Andet", Share = 45 });
+
+            mcChart.DataContext = StatistikCollection1;
+        }
 
         private void BtnClickSlet(object sender, RoutedEventArgs e)
         {
@@ -45,6 +56,19 @@ namespace Eventkoordination___Eksamen
         private void BtnClickKomment(object sender, RoutedEventArgs e)
         {
 
+        }
+        public class Statistik
+        {
+            public string Name { get; set; }
+            public Int16 Share { get; set; }
+
+        }
+    }
+    internal class StatistikCollection
+    {
+        internal void Add(TabWindowAdmin.Statistik statistik)
+        {
+            
         }
     }
 }
