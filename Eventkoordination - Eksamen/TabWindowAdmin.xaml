@@ -9,11 +9,92 @@
         Title="TabWindowAdmin" Height="450" Width="800">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="422" Margin="-3,-1,0,-0.333" VerticalAlignment="Top" Width="796">
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="News">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox HorizontalAlignment="Left" Height="164" Margin="10,50,0,0" VerticalAlignment="Top" Width="346" HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="NewsFeed"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0" Click="BtnClickOpretEvent"/>
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="10,252,0,0" VerticalAlignment="Top" Width="346">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="Kommentar Felt"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="257,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="257,170,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Event">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"/>
+                    <Grid Grid.Row="0" Grid.Column="1" Background="WhiteSmoke" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Ble" FontSize="20" TextAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Text="05-05-2019" FontSize="13"/>
+                        <TextBlock Grid.Row="2" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium mauris quis augue hendrerit, in imperdiet nisi faucibus. Nam pulvinar convallis justo. Class aptent taciti sociosqu ad litora torquent per conubia n" FontSize="11" TextWrapping="Wrap"/>
+                        <TextBlock Grid.Row="3" Text="Skolen" FontSize="16" TextAlignment="Center"/>
+                    </Grid>
+                </Grid>
+                
+            </TabItem>
+            <TabItem Header="Vagt">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="145*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Content="Begivenhed - Dag 1" HorizontalAlignment="Left" Height="178" VerticalAlignment="Top" Width="263" Margin="35.241,116,0,0" Grid.Column="1"/>
+                    <Label Content="14:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="12:00" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="3.711,6.577" Margin="57.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="16:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="18:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="20:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,264,0,0" Grid.Column="1"/>
+                    <Label Content="10:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,134,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,134,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,264,0,0" Grid.Column="1"/>
+                    <ScrollBar HorizontalAlignment="Left" Margin="281.241,116,0,0" VerticalAlignment="Top" Height="178" Grid.Column="1" Width="17"/>
+                    <Frame Content="Begivenhed - Dag 1" HorizontalAlignment="Left" Height="178" VerticalAlignment="Top" Width="263" Margin="377.241,112,0,0" Grid.Column="1"/>
+                    <ScrollBar HorizontalAlignment="Left" Margin="623.241,112,0,0" VerticalAlignment="Top" Height="178" Grid.Column="1" Width="17"/>
+                    <Label Content="10:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,134,0,0" RenderTransformOrigin="0.421,-0.462" Grid.Column="1"/>
+                    <Label Content="Vagt 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,134,0,0" Grid.Column="1"/>
+                    <Label Content="12:00" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="3.711,6.577" Margin="397.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="14:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="16:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="18:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="20:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,264,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,264,0,0" Grid.Column="1"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Statistik">
                 <Grid Background="#FFE5E5E5">

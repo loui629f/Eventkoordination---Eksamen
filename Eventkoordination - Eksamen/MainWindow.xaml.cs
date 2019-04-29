@@ -20,14 +20,27 @@ namespace Eventkoordination___Eksamen
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+       
 		public MainWindow()
 		{
 			InitializeComponent();
 		}
 
-        private void Logindbtn_Click(object sender, RoutedEventArgs e)
+        private void Brugernavntxtbox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Adgangskodetxtbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           
+        }
+
+        private void Logindbtn_Click(object sender, RoutedEventArgs e)
+        {
+            TabWindowAdmin tabs = new TabWindowAdmin();
+            tabs.Show();
+            this.Close();
         }
     }
 }
