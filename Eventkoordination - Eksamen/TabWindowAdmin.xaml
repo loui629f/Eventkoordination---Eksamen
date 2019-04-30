@@ -33,32 +33,20 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Event">
+
                 <Grid Background="#FFE5E5E5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="200"/>
-                    </Grid.ColumnDefinitions>
-                    <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2"/>
-                    <Grid Grid.Row="0" Grid.Column="1" Background="WhiteSmoke" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="25"/>
-                            <RowDefinition Height="25"/>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Text="Ble" FontSize="20" TextAlignment="Center"/>
-                        <TextBlock Grid.Row="1" Text="05-05-2019" FontSize="13"/>
-                        <TextBlock Grid.Row="2" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium mauris quis augue hendrerit, in imperdiet nisi faucibus. Nam pulvinar convallis justo. Class aptent taciti sociosqu ad litora torquent per conubia n" FontSize="11" TextWrapping="Wrap"/>
-                        <TextBlock Grid.Row="3" Text="Skolen" FontSize="16" TextAlignment="Center"/>
-                    </Grid>
+                    <RichTextBox Name="EventTxtBox"  HorizontalAlignment="Left" Height="100" Margin="40,40,0,0" VerticalAlignment="Top" Width="300">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="Event"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+               
+                    <CheckBox Name="CheckEvent" Content="Accepter" HorizontalAlignment="Left" Margin="265,120,0,0" VerticalAlignment="Top"/>
+                    <Button Name="SletEventBtn" Content="x" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Width="20"/>
                 </Grid>
-                
+
             </TabItem>
             <TabItem Header="Vagt">
                 <Grid Background="#FFE5E5E5">

@@ -63,8 +63,13 @@ namespace Eventkoordination___Eksamen
             public Int16 Share { get; set; }
 
         }
-    }
-    internal class StatistikCollection
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
+	internal class StatistikCollection
     {
         internal void Add(TabWindowAdmin.Statistik statistik)
         {
