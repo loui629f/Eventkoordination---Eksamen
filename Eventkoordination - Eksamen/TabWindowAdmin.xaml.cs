@@ -76,14 +76,15 @@ namespace Eventkoordination___Eksamen
     {
         public StatistikCollection()
         {
-            Add(new Statistik { Name = "oprydning", Share = 25 });
-            Add(new Statistik { Name = "Fest", Share = 25 });
-            Add(new Statistik { Name = "Opstilling", Share = 25 });
-            Add(new Statistik { Name = "Andet", Share = 25 });
+            Add(new Statistik { Name = "oprydning", Share = 15 });
+            Add(new Statistik { Name = "Fest", Share = 15 });
+            Add(new Statistik { Name = "Opstilling", Share = 30 });
+            Add(new Statistik { Name = "Andet", Share = 30 });
 
 
         }
 
+                
 
     }
 
