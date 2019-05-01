@@ -42,7 +42,7 @@ using System.Windows.Shapes;
             {
                 TabWindowAdmin tabs = new TabWindowAdmin();
                 tabs.Show();
-                
+                this.Close();
             }
         }
     }
