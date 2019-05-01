@@ -45,7 +45,6 @@
                     <CheckBox Name="CheckEvent" Content="Accepter" HorizontalAlignment="Left" Margin="265,120,0,0" VerticalAlignment="Top"/>
                     <Button Name="SletEventBtn" Content="x" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Width="20"/>
                 </Grid>
-               
 
             </TabItem>
             <TabItem Header="Vagt">
@@ -90,26 +89,14 @@
                         <ColumnDefinition Width="97*"/>
                         <ColumnDefinition Width="693*"/>
                     </Grid.ColumnDefinitions>
-
-
-
-
                     <Label Content= "Frivillige" FontSize="15" HorizontalAlignment="Left" Margin="56,79,0,0" VerticalAlignment="Top" Width="80" Grid.ColumnSpan="2"/>
                     <Label Content="Aktive" FontSize="15"  HorizontalAlignment="Left" Margin="56,157,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="-0.041,0.528" Grid.ColumnSpan="2"/>
                     <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="44,84,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.535,1.713" Grid.Column="1"/>
                     <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="44,162,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.535,1.562" Grid.Column="1"/>
-
-
-
-
-
-
                     <Grid Grid.ColumnSpan="2">
-
                         <Grid.Resources>
                             <local:StatistikCollection x:Key="StatistikCollection"/>
                         </Grid.Resources>
-
                         <DVC:Chart Title="Statistik" Canvas.Top="80" Canvas.Left="10" Name="mcChart" Width="400" Height="250" Background="LightSteelBlue" Margin="359,45,31,99">
                             <DVC:Chart.Series>
                                 <DVC:PieSeries Title="Experience" ItemsSource="{StaticResource StatistikCollection}" IndependentValueBinding="{Binding Path=Name}" DependentValueBinding="{Binding Path=Share}">
@@ -117,18 +104,8 @@
                             </DVC:Chart.Series>
                         </DVC:Chart>
                     </Grid>
-
-
-
-
-
-
-
-
                 </Grid>
-
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>
