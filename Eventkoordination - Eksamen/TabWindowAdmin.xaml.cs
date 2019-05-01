@@ -11,28 +11,29 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Controls.DataVisualization;
+using System.Windows.Controls.DataVisualization.Charting;
+using System.Collections.ObjectModel;
+
 
 namespace Eventkoordination___Eksamen
 {
-	/// <summary>
-	/// Interaction logic for TabWindowAdmin.xaml
-	/// </summary>
-	public partial class TabWindowAdmin : Window
-	{
-        StatistikCollection StatistikCollection1;
+    /// <summary>
+    /// Interaction logic for TabWindowAdmin.xaml
+    /// </summary>
+    public partial class TabWindowAdmin : Window
+    {
+
+
+
         public TabWindowAdmin()
-		{
-			InitializeComponent();
+        {
+            InitializeComponent();
 
-            StatistikCollection1 = new StatistikCollection();
 
-            StatistikCollection1.Add(new Statistik { Name = "Oprydning", Share = 10 });
-            StatistikCollection1.Add(new Statistik { Name = "Fest", Share = 35 });
-            StatistikCollection1.Add(new Statistik { Name = "Fest", Share = 35 });
-            StatistikCollection1.Add(new Statistik { Name = "Opstilling", Share = 10 });
-            StatistikCollection1.Add(new Statistik { Name = "Andet", Share = 45 });
 
-            mcChart.DataContext = StatistikCollection1;
+
+
         }
 
         private void BtnClickSlet(object sender, RoutedEventArgs e)
@@ -57,23 +58,34 @@ namespace Eventkoordination___Eksamen
         {
 
         }
-        public class Statistik
-        {
-            public string Name { get; set; }
-            public Int16 Share { get; set; }
 
-        }
 
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
 
-		}
-	}
-	internal class StatistikCollection
-    {
-        internal void Add(TabWindowAdmin.Statistik statistik)
-        {
-            
-        }
+
+
     }
+    public class Statistik
+    {
+        public string Name { get; set; }
+        public Int16 Share { get; set; }
+
+
+    }
+
+    public class StatistikCollection : System.Collections.ObjectModel.Collection<Statistik>
+    {
+        public StatistikCollection()
+        {
+            Add(new Statistik { Name = "oprydning", Share = 15 });
+            Add(new Statistik { Name = "Fest", Share = 15 });
+            Add(new Statistik { Name = "Opstilling", Share = 30 });
+            Add(new Statistik { Name = "Andet", Share = 30 });
+
+
+        }
+
+                
+
+    }
+
 }
