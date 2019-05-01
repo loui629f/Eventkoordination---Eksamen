@@ -38,6 +38,7 @@
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="Event"/>
+                                
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
