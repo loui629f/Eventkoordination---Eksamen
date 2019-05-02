@@ -9,6 +9,8 @@
         Title="TabWindowAdmin" Height="450" Width="800">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="422" Margin="-3,-1,0,-0.333" VerticalAlignment="Top" Width="796">
+          
+            <!--NEWSFEED-->
             <TabItem Header="News">
                 <Grid Background="#FFE5E5E5">
                     <RichTextBox HorizontalAlignment="Left" Height="164" Margin="10,50,0,0" VerticalAlignment="Top" Width="346" HorizontalScrollBarVisibility="Visible"
@@ -32,22 +34,23 @@
                     <Button Content="Vagter" HorizontalAlignment="Left" Margin="257,170,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter"/>
                 </Grid>
             </TabItem>
+            
+            <!--EVENT-->
             <TabItem Header="Event">
                 <Grid Background="#FFE5E5E5">
                     <RichTextBox Name="EventTxtBox"  HorizontalAlignment="Left" Height="100" Margin="40,40,0,0" VerticalAlignment="Top" Width="300">
                         <FlowDocument>
                             <Paragraph>
-                                <Run Text="Event"/>
-                                
+                                <Run Text="Event"/>                                
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-
                     <CheckBox Name="CheckEvent" Content="Accepter" HorizontalAlignment="Left" Margin="265,120,0,0" VerticalAlignment="Top"/>
                     <Button Name="SletEventBtn" Content="x" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Width="20"/>
                 </Grid>
-
             </TabItem>
+            
+            <!--VAGT-->
             <TabItem Header="Vagt">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
@@ -84,6 +87,8 @@
                     <Label Content="Vagt 6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,264,0,0" Grid.Column="1"/>
                 </Grid>
             </TabItem>
+            
+            <!--STATISTIK-->
             <TabItem Header="Statistik">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
