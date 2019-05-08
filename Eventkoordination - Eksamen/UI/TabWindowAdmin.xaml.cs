@@ -84,8 +84,10 @@ namespace Eventkoordination___Eksamen
 
         }
 
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-
+        }
     }
     public class Statistik
     {
