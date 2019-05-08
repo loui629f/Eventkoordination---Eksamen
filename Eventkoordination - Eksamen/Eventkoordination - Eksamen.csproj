@@ -68,12 +68,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controller.cs" />
+    <Compile Include="DBController.cs" />
+    <Compile Include="LoginController.cs" />
     <Compile Include="OpretEvent.xaml.cs">
       <DependentUpon>OpretEvent.xaml</DependentUpon>
     </Compile>
     <Compile Include="SletEvent.xaml.cs">
       <DependentUpon>SletEvent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StatistikController.cs" />
     <Compile Include="TabWindowAdmin.xaml.cs">
       <DependentUpon>TabWindowAdmin.xaml</DependentUpon>
     </Compile>
