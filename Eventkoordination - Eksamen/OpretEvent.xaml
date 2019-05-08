@@ -30,16 +30,16 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="358,242,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="358,270,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="358,298,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,51,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,79,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,107,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,135,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,163,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,186,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,214,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,242,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,270,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,298,0,0" TextWrapping="Wrap" Text="Mængde af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,51,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,79,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,107,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,135,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,163,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,186,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,214,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,242,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,270,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="521,298,0,0" TextWrapping="Wrap" Text="Antal af Vagter:" VerticalAlignment="Top" Width="120"/>
         <Button Content="Send Email" HorizontalAlignment="Left" Margin="358,349,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickEmail"/>
         <Button Content="Annuller" HorizontalAlignment="Left" Margin="465,349,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickAnnuller"/>
         <Button Content="Luk" HorizontalAlignment="Left" Margin="566,349,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickLuk"/>
