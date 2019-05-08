@@ -30,10 +30,10 @@ namespace Eventkoordination___Eksamen
 
                     SqlCommand createEvent = new SqlCommand(, con);
                     createEvent.CommandType = CommandType.StoredProcedure;
-                    createEvent.Parameters.Add(new SqlParameter("@EventId", newEvent.eventId));
-                    createEvent.Parameters.Add(new SqlParameter("@EventName", newEvent.eventName));
-                    createEvent.Parameters.Add(new SqlParameter("@EventDate", newEvent.eventDate));
-                    createEvent.Parameters.Add(new SqlParameter("@EventDescription", newEvent.eventDescription));
+                    createEvent.Parameters.Add(new SqlParameter("@EventId", newEvent.EventId));
+                    createEvent.Parameters.Add(new SqlParameter("@EventName", newEvent.EventName));
+                    createEvent.Parameters.Add(new SqlParameter("@EventDate", newEvent.EventDate));
+                    createEvent.Parameters.Add(new SqlParameter("@EventDescription", newEvent.EventDescription));
 
                     createEvent.ExecuteNonQuery();
 
@@ -51,7 +51,7 @@ namespace Eventkoordination___Eksamen
 
 
 
-        public void ShowEvent(int eventId, string eventName, DateTime eventDate, string eventDescription)
+        public void ShowEvent(int eventId, string eventName, DateTime eventDate, string eventDescription, bool eventConfirmed)
         {
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -66,6 +66,7 @@ namespace Eventkoordination___Eksamen
                     showEvent.Parameters.Add(new SqlParameter("@EventName", eventName));
                     showEvent.Parameters.Add(new SqlParameter("@EventDate", eventDate));
                     showEvent.Parameters.Add(new SqlParameter("@EventDescription", eventDescription));
+					showEvent.Parameters.Add(new SqlParameter("@EventConfirmed", eventConfirmed));
 
                     showEvent.ExecuteNonQuery();
 
