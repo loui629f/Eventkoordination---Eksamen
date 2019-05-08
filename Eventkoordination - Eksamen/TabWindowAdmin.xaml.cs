@@ -95,7 +95,7 @@ namespace Eventkoordination___Eksamen
 
     }
 
-    public class StatistikCollection : System.Collections.ObjectModel.Collection<Statistik>
+    public class StatistikCollection : Collection<Statistik>
     {
         public StatistikCollection()
         {
