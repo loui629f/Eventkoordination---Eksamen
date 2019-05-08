@@ -142,5 +142,11 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EventLibrary\EventLibrary.csproj">
+      <Project>{e3066105-226e-41ec-a9bc-d191a6aa12e8}</Project>
+      <Name>EventLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
