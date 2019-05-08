@@ -17,9 +17,9 @@ namespace Eventkoordination___Eksamen
     /// <summary>
     /// Interaction logic for Vagt.xaml
     /// </summary>
-    public partial class Vagt : Window
+    public partial class Shift : Window
     {
-        public Vagt()
+        public Shift()
         {
             InitializeComponent();
         }

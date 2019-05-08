@@ -30,10 +30,10 @@ namespace Eventkoordination___Eksamen
 
                     SqlCommand createEvent = new SqlCommand(, con);
                     createEvent.CommandType = CommandType.StoredProcedure;
-                    createEvent.Parameters.Add(new SqlParameter("@EventId", newEvent.eventId));
-                    createEvent.Parameters.Add(new SqlParameter("@EventName", newEvent.eventName));
-                    createEvent.Parameters.Add(new SqlParameter("@EventDate", newEvent.eventDate));
-                    createEvent.Parameters.Add(new SqlParameter("@EventDescription", newEvent.eventDescription));
+                    createEvent.Parameters.Add(new SqlParameter("@EventId", newEvent.EventId));
+                    createEvent.Parameters.Add(new SqlParameter("@EventName", newEvent.EventName));
+                    createEvent.Parameters.Add(new SqlParameter("@EventDate", newEvent.EventDate));
+                    createEvent.Parameters.Add(new SqlParameter("@EventDescription", newEvent.EventDescription));
 
                     createEvent.ExecuteNonQuery();
 
