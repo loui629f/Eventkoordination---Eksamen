@@ -41,25 +41,48 @@ namespace Eventkoordination___Eksamen
             SletEvent sletEvent = new SletEvent();
             sletEvent.Show();
         }
-
         private void BtnClickVagter(object sender, RoutedEventArgs e)
         {
             Vagt vagter = new Vagt();
             vagter.Show();
         }
-
         private void BtnClickOpretEvent(object sender, RoutedEventArgs e)
         {
             OpretEvent opretEvent = new OpretEvent();
             opretEvent.Show();
         }
-
         private void BtnClickKomment(object sender, RoutedEventArgs e)
         {
 
         }
+        private void BtnClickSlet2(object sender, RoutedEventArgs e)
+        {
+            SletEvent sletEvent = new SletEvent();
+            sletEvent.Show();
+        }
+        private void BtnClickVagter2(object sender, RoutedEventArgs e)
+        {
+            Vagt vagter = new Vagt();
+            vagter.Show();
+        }
+        private void BtnClickKomment2(object sender, RoutedEventArgs e)
+        {
 
+        }
+        private void BtnClickSlet3(object sender, RoutedEventArgs e)
+        {
+            SletEvent sletEvent = new SletEvent();
+            sletEvent.Show();
+        }
+        private void BtnClickVagter3(object sender, RoutedEventArgs e)
+        {
+            Vagt vagter = new Vagt();
+            vagter.Show();
+        }
+        private void BtnClickKomment3(object sender, RoutedEventArgs e)
+        {
 
+        }
 
 
 
