@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DomainLayer;
 
-namespace EventLibrary
+namespace ApplicationLayer
 {
-    public class EventRepository
+    public class EventRepository : Event
     {
         private List<Event> Events = new List<Event>();
         private Event event1 = new Event();

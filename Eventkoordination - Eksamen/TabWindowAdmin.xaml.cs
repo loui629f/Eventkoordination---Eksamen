@@ -16,7 +16,7 @@ using System.Windows.Controls.DataVisualization.Charting;
 using System.Collections.ObjectModel;
 
 
-namespace Eventkoordination___Eksamen
+namespace UI
 {
     /// <summary>
     /// Interaction logic for TabWindowAdmin.xaml

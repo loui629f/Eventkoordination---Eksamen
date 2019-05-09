@@ -10,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Eventkoordination___Eksamen
+namespace UI
 {
     /// <summary>
-    /// Interaction logic for SletEvent.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class SletEvent : Window
+    public partial class MainWindow : Window
     {
-        public SletEvent()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void BtnClickJa(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BtnClickNej(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -12,19 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Eventkoordination___Eksamen
+namespace UI
 {
     /// <summary>
-    /// Interaction logic for Vagt.xaml
+    /// Interaction logic for SletEvent.xaml
     /// </summary>
-    public partial class Shift : Window
+    public partial class SletEvent : Window
     {
-        public Shift()
+        public SletEvent()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnClickJa(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnClickNej(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
