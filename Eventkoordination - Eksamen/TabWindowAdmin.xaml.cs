@@ -43,7 +43,7 @@ namespace Eventkoordination___Eksamen
         }
         private void BtnClickVagter(object sender, RoutedEventArgs e)
         {
-            Shift vagter = new Shift();
+            Vagt vagter = new Vagt();
             vagter.Show();
         }
         private void BtnClickOpretEvent(object sender, RoutedEventArgs e)
@@ -62,7 +62,7 @@ namespace Eventkoordination___Eksamen
         }
         private void BtnClickVagter2(object sender, RoutedEventArgs e)
         {
-            Shift vagter = new Shift();
+            Vagt vagter = new Vagt();
             vagter.Show();
         }
         private void BtnClickKomment2(object sender, RoutedEventArgs e)
@@ -76,7 +76,7 @@ namespace Eventkoordination___Eksamen
         }
         private void BtnClickVagter3(object sender, RoutedEventArgs e)
         {
-            Shift vagter = new Shift();
+            Vagt vagter = new Vagt();
             vagter.Show();
         }
         private void BtnClickKomment3(object sender, RoutedEventArgs e)
