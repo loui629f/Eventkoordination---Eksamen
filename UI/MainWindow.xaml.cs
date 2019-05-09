@@ -10,33 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace UI
 {
     /// <summary>
-    /// Interaction logic for OpretEvent.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class OpretEvent : Window
+    public partial class MainWindow : Window
     {
-        public OpretEvent()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void BtnClickEmail(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnClickAnnuller(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnClickLuk(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

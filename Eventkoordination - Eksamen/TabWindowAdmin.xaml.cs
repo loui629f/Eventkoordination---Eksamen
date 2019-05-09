@@ -16,7 +16,7 @@ using System.Windows.Controls.DataVisualization.Charting;
 using System.Collections.ObjectModel;
 
 
-namespace Eventkoordination___Eksamen
+namespace UI
 {
     /// <summary>
     /// Interaction logic for TabWindowAdmin.xaml
@@ -84,8 +84,10 @@ namespace Eventkoordination___Eksamen
 
         }
 
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-
+        }
     }
     public class Statistik
     {

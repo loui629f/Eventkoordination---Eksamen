@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-    namespace Eventkoordination___Eksamen
+    namespace UI
     {
         /// <summary>
         /// Interaction logic for MainWindow.xaml
