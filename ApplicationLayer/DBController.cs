@@ -12,12 +12,12 @@ namespace ApplicationLayer
     {
 
         private static string connectionString =
-            "Server=EALSQL1.eal.local; Database=A_DB23_2018; User Id=A_STUDENT17; Password=A_OPENDB23;";
+            "Server=EALSQL1.eal.local; Database=A_DB17_2018; User Id=A_STUDENT17; Password=A_OPENDB17;";
 
         private EventRepository eventRepo = new EventRepository();
 
 
-        public void CreateEvent(int eventId, string eventName, DateTime eventDate, string eventDescription)
+        public void CreateEventAdmin(int eventId, string eventName, DateTime eventDate, string eventDescription, bool eventConfirmed)
         {
 
             Event newEvent = new Event(eventId, eventName, eventDate, eventDescription);
@@ -28,7 +28,7 @@ namespace ApplicationLayer
                 {
                     con.Open();
 
-                    SqlCommand createEvent = new SqlCommand(, con);
+                    SqlCommand createEvent = new SqlCommand("spInsertEventAdmin", con);
                     createEvent.CommandType = CommandType.StoredProcedure;
                     createEvent.Parameters.Add(new SqlParameter("@EventId", newEvent.EventId));
                     createEvent.Parameters.Add(new SqlParameter("@EventName", newEvent.EventName));
@@ -60,7 +60,7 @@ namespace ApplicationLayer
                 {
                     con.Open();
 
-                    SqlCommand showEvent = new SqlCommand("SelectAllEvents", con);
+                    SqlCommand showEvent = new SqlCommand("spSelectAllEvents", con);
                     showEvent.CommandType = CommandType.StoredProcedure;
                     showEvent.Parameters.Add(new SqlParameter("@EventId", eventId));
                     showEvent.Parameters.Add(new SqlParameter("@EventName", eventName));
