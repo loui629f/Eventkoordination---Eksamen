@@ -24,7 +24,7 @@ namespace UI
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnClickOk(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
