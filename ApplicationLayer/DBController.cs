@@ -28,14 +28,14 @@ namespace ApplicationLayer
                 {
                     con.Open();
 
-                    SqlCommand createEvent = new SqlCommand("spInsertEventAdmin", con);
-                    createEvent.CommandType = CommandType.StoredProcedure;
-                    createEvent.Parameters.Add(new SqlParameter("@EventId", newEvent.EventId));
-                    createEvent.Parameters.Add(new SqlParameter("@EventName", newEvent.EventName));
-                    createEvent.Parameters.Add(new SqlParameter("@EventDate", newEvent.EventDate));
-                    createEvent.Parameters.Add(new SqlParameter("@EventDescription", newEvent.EventDescription));
+                    SqlCommand createEventAdmin = new SqlCommand("spInsertEventAdmin", con);
+                    createEventAdmin.CommandType = CommandType.StoredProcedure;
+                    createEventAdmin.Parameters.Add(new SqlParameter("@EventId", newEvent.EventId));
+                    createEventAdmin.Parameters.Add(new SqlParameter("@EventName", newEvent.EventName));
+                    createEventAdmin.Parameters.Add(new SqlParameter("@EventDate", newEvent.EventDate));
+                    createEventAdmin.Parameters.Add(new SqlParameter("@EventDescription", newEvent.EventDescription));
 
-                    createEvent.ExecuteNonQuery();
+                    createEventAdmin.ExecuteNonQuery();
 
 
                 }
