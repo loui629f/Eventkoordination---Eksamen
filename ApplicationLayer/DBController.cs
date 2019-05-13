@@ -51,31 +51,37 @@ namespace ApplicationLayer
 
 
 
-        public void ShowEvent(int eventId, string eventName, DateTime eventDate, string eventDescription, bool eventConfirmed)
+        public void ShowNotConfirmedEvent()
         {
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                try
-                {
-                    con.Open();
+				try
+				{
+					con.Open();
 
-                    SqlCommand showEvent = new SqlCommand("spSelectAllEvents", con);
-                    showEvent.CommandType = CommandType.StoredProcedure;
-                    showEvent.Parameters.Add(new SqlParameter("@EventId", eventId));
-                    showEvent.Parameters.Add(new SqlParameter("@EventName", eventName));
-                    showEvent.Parameters.Add(new SqlParameter("@EventDate", eventDate));
-                    showEvent.Parameters.Add(new SqlParameter("@EventDescription", eventDescription));
-					showEvent.Parameters.Add(new SqlParameter("@EventConfirmed", eventConfirmed));
+					SqlCommand showNotConfirmedEvent = new SqlCommand("spSelectAllEvents", con);
+					showNotConfirmedEvent.CommandType = CommandType.StoredProcedure;
 
-                    showEvent.ExecuteNonQuery();
+					SqlDataReader showNotConfirmedEventReader = showNotConfirmedEvent.ExecuteReader();
 
+					if (showNotConfirmedEventReader.HasRows)
+					{
+						while (showNotConfirmedEventReader.Read())
+						{
+							string eventId = showNotConfirmedEventReader["EventId"].ToString();
+							string eventName = showNotConfirmedEventReader["EventName"].ToString();
+							string eventDate = showNotConfirmedEventReader["EventDate"].ToString();
+							string eventDescription = showNotConfirmedEventReader["EventDescription"].ToString();
+							//Indsæt i GUI
+						}
+					}
+				}
+				catch
+				{
+					throw new NotImplementedException();
+				}
 
-                }
-                catch
-                {
-                    throw new NotImplementedException();
-                }
             }
         }
     }
