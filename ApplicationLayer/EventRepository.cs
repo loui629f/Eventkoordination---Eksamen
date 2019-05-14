@@ -7,17 +7,32 @@ using DomainLayer;
 
 namespace ApplicationLayer
 {
-    public class EventRepository : Event
+    public class EventRepository
     {
-        private List<Event> Events = new List<Event>();
-        private Event event1 = new Event();
+		public List<Event> Events { get; private set; } = new List<Event>();
+        
+	
+        
+		public void Add(Event e)
+		{
+			Events.Add(e);
+		}
+		public int GetId(int index)
+		{
+			return Events[index].EventId;
+		}
+		public string GetName(int index)
+		{
+			return Events[index].EventName;
+		}
+		public DateTime GetDate(int index)
+		{
+			return Events[index].EventDate;
+		}
+		public string GetDescription(int index)
+		{
+			return Events[index].EventDescription;
+		}
 
-        public void CreateEvent(int eventId, string eventName, DateTime eventDate, string eventDescription)
-        {
-            Event even = new Event(eventId, eventName, eventDate, eventDescription);
-            event1 = even;
-
-        }
-
-    }
+	}
 }

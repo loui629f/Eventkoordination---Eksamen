@@ -51,7 +51,7 @@ namespace ApplicationLayer
 
 
 
-        public void ShowNotConfirmedEvent()
+        public EventRepository ShowNotConfirmedEvent()
         {
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -60,26 +60,33 @@ namespace ApplicationLayer
 				{
 					con.Open();
 
-					SqlCommand showNotConfirmedEvent = new SqlCommand("spSelectAllEvents", con);
+					SqlCommand showNotConfirmedEvent = new SqlCommand("spSelectNotConfirmedEvents", con);
 					showNotConfirmedEvent.CommandType = CommandType.StoredProcedure;
-
+					EventRepository eventRepository = new EventRepository();
+					Event e;
 					SqlDataReader showNotConfirmedEventReader = showNotConfirmedEvent.ExecuteReader();
 
 					if (showNotConfirmedEventReader.HasRows)
 					{
 						while (showNotConfirmedEventReader.Read())
 						{
-							string eventId = showNotConfirmedEventReader["EventId"].ToString();
-							string eventName = showNotConfirmedEventReader["EventName"].ToString();
-							string eventDate = showNotConfirmedEventReader["EventDate"].ToString();
-							string eventDescription = showNotConfirmedEventReader["EventDescription"].ToString();
-							//Indsæt i GUI
+							e = new Event
+							{
+								EventId = Convert.ToInt32(showNotConfirmedEventReader["EventId"].ToString()),
+								EventName = showNotConfirmedEventReader["EventName"].ToString(),
+								EventDate = Convert.ToDateTime(showNotConfirmedEventReader["EventDate"].ToString()),
+								EventDescription = showNotConfirmedEventReader["EventDescription"].ToString()
+							};
+
+							eventRepository.Add(e);
+							
 						}
 					}
+					return eventRepository;
 				}
-				catch
+				catch(Exception e)
 				{
-					throw new NotImplementedException();
+					throw e;
 				}
 
             }

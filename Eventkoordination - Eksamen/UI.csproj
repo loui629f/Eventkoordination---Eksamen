@@ -139,13 +139,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventLibrary\DomainLayer.csproj">
-      <Project>{e3066105-226e-41ec-a9bc-d191a6aa12e8}</Project>
-      <Name>DomainLayer</Name>
-    </ProjectReference>
+    <Folder Include="UI\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\" />
+    <ProjectReference Include="..\ApplicationLayer\ApplicationLayer.csproj">
+      <Project>{0487764b-2895-4a1e-aa6f-2a1ad0799518}</Project>
+      <Name>ApplicationLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

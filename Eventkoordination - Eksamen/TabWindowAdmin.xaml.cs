@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Windows.Controls.DataVisualization;
 using System.Windows.Controls.DataVisualization.Charting;
 using System.Collections.ObjectModel;
+using ApplicationLayer;
 
 
 namespace UI
@@ -24,19 +25,28 @@ namespace UI
     public partial class TabWindowAdmin : Window
     {
 
+		DBController dbcon = new DBController();
+		public EventRepository EventRepository { get; set; }
 
 
-        public TabWindowAdmin()
+		public TabWindowAdmin()
         {
             InitializeComponent();
-
+			this.EventRepository = dbcon.ShowNotConfirmedEvent();
+			rtb_eventOne.Document.Blocks.Clear();
+			rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
+				$"EventId: {this.EventRepository.GetId(0)}/nEventName: {this.EventRepository.GetName(0)}" +
+	$"/nEventDate: {this.EventRepository.GetDate(0).ToString()} /nEventDescription: {this.EventRepository.GetDescription(0)}")));
 
 
 
 
         }
-
-        private void BtnClickSlet(object sender, RoutedEventArgs e)
+		private void RichTextBox_TextChanged(object sender, EventArgs e)
+		{
+			
+		}
+		private void BtnClickSlet(object sender, RoutedEventArgs e)
         {
             SletEvent sletEvent = new SletEvent();
             sletEvent.Show();
@@ -84,12 +94,9 @@ namespace UI
 
         }
 
-        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
-    }
-    public class Statistik
+	}
+	public class Statistik
     {
         public string Name { get; set; }
         public Int16 Share { get; set; }
