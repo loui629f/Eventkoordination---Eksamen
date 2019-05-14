@@ -16,6 +16,7 @@ using System.Windows.Controls.DataVisualization.Charting;
 using System.Collections.ObjectModel;
 
 
+
 namespace UI
 {
     /// <summary>
@@ -67,7 +68,7 @@ namespace UI
         }
         private void BtnClickKomment2(object sender, RoutedEventArgs e)
         {
-
+           
         }
         private void BtnClickSlet3(object sender, RoutedEventArgs e)
         {
@@ -85,6 +86,11 @@ namespace UI
         }
 
         private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void RichTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }

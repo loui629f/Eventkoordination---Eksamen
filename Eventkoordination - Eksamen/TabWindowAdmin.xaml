@@ -11,63 +11,67 @@
         <TabControl HorizontalAlignment="Left" Height="483" Margin="-3,-1,-29,0" VerticalAlignment="Top" Width="807">
             <TabItem Header="News">
                 <Grid Background="#FFE5E5E5" Margin="0,0,30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="64*"/>
+                        <ColumnDefinition Width="707*"/>
+                    </Grid.ColumnDefinitions>
                     <RichTextBox HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
-                        VerticalScrollBarVisibility="Visible">
+                        VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="2" TextChanged="RichTextBox_TextChanged_1">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="NewsFeed"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="269,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
-                        VerticalScrollBarVisibility="Visible" TextChanged="RichTextBox_TextChanged">
+                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="205.037,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible" TextChanged="RichTextBox_TextChanged" Grid.Column="1">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="NewsFeed"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="520,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
-                        VerticalScrollBarVisibility="Visible">
+                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="456.037,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible" Grid.Column="1">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="NewsFeed"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0" Click="BtnClickOpretEvent"/>
-                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="15,336,0,0" VerticalAlignment="Top" Width="237">
+                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0" Click="BtnClickOpretEvent" Grid.ColumnSpan="2"/>
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="15,336,0,0" VerticalAlignment="Top" Width="237" Grid.ColumnSpan="2">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="Kommentar Felt"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="520,336,0,0" VerticalAlignment="Top" Width="237">
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="456.037,336,0,0" VerticalAlignment="Top" Width="237" Grid.Column="1">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="Kommentar Felt"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="269,336,0,0" VerticalAlignment="Top" Width="237">
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="205.037,336,0,0" VerticalAlignment="Top" Width="237" Grid.Column="1">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="Kommentar Felt"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="15,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment"/>
-                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="158,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet"/>
-                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="158,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter"/>
-                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="269,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment2"/>
-                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="401,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet2"/>
-                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="663,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter2"/>
-                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="520,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment3"/>
-                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="663,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet3"/>
-                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="401,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter3"/>
-                    <Button Content="-->" HorizontalAlignment="Left" Margin="682,16,0,0" VerticalAlignment="Top" Width="56"/>
-                    <Button Content="&lt;--" HorizontalAlignment="Left" Margin="626,16,0,0" VerticalAlignment="Top" Width="56"/>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="15,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment" Grid.ColumnSpan="2"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="94.037,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet" Grid.Column="1"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="94.037,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter" Grid.Column="1"/>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="205.037,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment2" Grid.Column="1"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="337.037,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet2" Grid.Column="1"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="599.037,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter2" Grid.Column="1"/>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="456.037,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment3" Grid.Column="1"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="599.037,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet3" Grid.Column="1"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="337.037,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter3" Grid.Column="1"/>
+                    <Button Content="-->" HorizontalAlignment="Left" Margin="618.037,16,0,0" VerticalAlignment="Top" Width="56" Grid.Column="1"/>
+                    <Button Content="&lt;--" HorizontalAlignment="Left" Margin="562.037,16,0,0" VerticalAlignment="Top" Width="56" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Event">

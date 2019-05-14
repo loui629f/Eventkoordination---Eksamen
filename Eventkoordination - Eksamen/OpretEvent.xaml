@@ -20,7 +20,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="358,51,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="358,51,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="358,79,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="358,107,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="358,135,0,0" TextWrapping="Wrap" Text="Tid:" VerticalAlignment="Top" Width="120"/>
