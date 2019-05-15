@@ -51,9 +51,9 @@ namespace ApplicationLayer
 
 
 
-        public void ShowNotConfirmedEvent()
+        /*public List<string> ShowNotConfirmedEvent()
         {
-
+            List<string> dbInfo = new List<string>();
             using (SqlConnection con = new SqlConnection(connectionString))
             {
 				try
@@ -83,7 +83,7 @@ namespace ApplicationLayer
 				}
 
             }
-        }
+        }*/
     }
 
 }

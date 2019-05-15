@@ -47,6 +47,7 @@
     <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -139,6 +140,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationLayer\ApplicationLayer.csproj">
+      <Project>{0487764b-2895-4a1e-aa6f-2a1ad0799518}</Project>
+      <Name>ApplicationLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EventLibrary\DomainLayer.csproj">
       <Project>{e3066105-226e-41ec-a9bc-d191a6aa12e8}</Project>
       <Name>DomainLayer</Name>
