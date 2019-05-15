@@ -97,22 +97,13 @@ namespace UI
         }
 
 
-        string GetString(System.Windows.Controls.RichTextBox Newsfeed1)
-        {
-            var textRange = new TextRange(Newsfeed1.Document.ContentStart, Newsfeed1.Document.ContentEnd);
-            return textRange.Text;
-        }
+        
 
-        private void RefreshBtnClick(object sender, EventArgs e)
-        {
-            /*TextReader reader = new StreamReader(@"C:\Users\Kasper\Desktop\Eventkoordination---Eksamen\EventLibrary\NewsFeed1TextFile.txt");
-            Newsfeed1.
-            reader.Close();*/
-            Stream myStream;
-            OpenFileDialog openFileDialog1 = new OpenFileDialog
-            
-                    
-        }
+        
+
+
+
+
         /*private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -137,10 +128,18 @@ namespace UI
             }
         }*/
 
-        string ConvertRichTextBoxContentToString(System.Windows.Controls.RichTextBox Newsfeed1 )
+       /* string ConvertRichTextBoxContentToString(System.Windows.Controls.RichTextBox Newsfeed1 )
         { 
             TextRange textRange = new TextRange(Newsfeed1.Document.ContentStart, Newsfeed1.Document.ContentEnd);
             return textRange.Text;
+        }
+        */
+
+        private void RefreshBtnClick(object sender, RoutedEventArgs e)
+        {
+            TextReader reader = new StreamReader(@"C:\Users\Nicolai Mogensen\Desktop\Eventkoordination---Eksamen\EventLibrary\NewsFeed1TextFile.txt");
+            Newsfeed1.AppendText = reader.ReadToEnd();
+            reader.Close();
         }
 
         /*private void textbox1(object sender, EventArgs e)

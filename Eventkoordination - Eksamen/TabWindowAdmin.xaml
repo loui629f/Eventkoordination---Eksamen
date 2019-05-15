@@ -11,7 +11,7 @@
         <TabControl HorizontalAlignment="Left" Height="483" Margin="-3,-1,-29,0" VerticalAlignment="Top" Width="807">
             <TabItem Header="News">
                 <Grid Background="#FFE5E5E5" Margin="0,0,30,0">
-                    <RichTextBox Name="Newsfeed1" HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                    <RichTextBox x:Name="Newsfeed1" HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
                         VerticalScrollBarVisibility="Visible">
                         <FlowDocument>
                             <Paragraph>
@@ -68,7 +68,7 @@
                     <Button Content="Vagter" HorizontalAlignment="Left" Margin="401,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter3"/>
                     <Button Content="-->" HorizontalAlignment="Left" Margin="682,16,0,0" VerticalAlignment="Top" Width="56"/>
                     <Button Content="&lt;--" HorizontalAlignment="Left" Margin="626,16,0,0" VerticalAlignment="Top" Width="56"/>
-                    <Button Content="Refresh" HorizontalAlignment="Left" Margin="158,10,0,0" VerticalAlignment="Top" Width="75" Click="RefreshBtnClick"/>
+                    <Button x:Name="RefreshBTNClick" Content="Refresh" HorizontalAlignment="Left" Margin="158,10,0,0" VerticalAlignment="Top" Width="75" Click="RefreshBtnClick"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Event">
