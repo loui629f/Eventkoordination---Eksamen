@@ -12,7 +12,15 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Event">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <ListView HorizontalAlignment="Left" Height="234" Margin="114,97,0,0" VerticalAlignment="Top" Width="461">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
             </TabItem>
         </TabControl>
 
