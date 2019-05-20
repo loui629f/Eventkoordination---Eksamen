@@ -1,13 +1,13 @@
-﻿<Window x:Class="Eventkoordination___Eksamen.Calendar"
+﻿<Window x:Class="UI.Calendar"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Eventkoordination___Eksamen"
-        mc:Ignorable="d"
-        Title="Calendar" Height="415.676" Width="306.378">
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d" 
+        Title="ShowCalendar" Height="415.676" Width="306.378">
     <Grid Margin="0,0,565,194">
-        <Calendar HorizontalAlignment="Left" Margin="26,25,-258,-69" VerticalAlignment="Top" Height="235" Width="232"/>
+         <Calendar HorizontalAlignment="Left" Margin="26,25,-258,-69" VerticalAlignment="Top" Height="235" Width="232"/>
         <Button Content="Luk" HorizontalAlignment="Left" Margin="107,207,-161,-36" VerticalAlignment="Top" Width="54" Click="ButtonClickLuk"/>
 
     </Grid>

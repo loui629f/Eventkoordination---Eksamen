@@ -94,9 +94,22 @@ namespace UI
 
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
 
-	}
-	public class Statistik
+        }
+
+        private void BtnClickKalender(object sender, RoutedEventArgs e)
+        {
+
+            
+        }
+
+
+
+
+    }
+    public class Statistik
     {
         public string Name { get; set; }
         public Int16 Share { get; set; }
