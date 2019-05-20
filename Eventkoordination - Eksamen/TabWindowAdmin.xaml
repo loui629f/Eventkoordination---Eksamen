@@ -1,28 +1,150 @@
-﻿<Window x:Class="Eventkoordination___Eksamen.TabWindowAdmin"
+﻿<Window x:Class="UI.TabWindowAdmin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Eventkoordination___Eksamen"
-        mc:Ignorable="d"
-        Title="TabWindowAdmin" Height="450" Width="800">
+        xmlns:local="clr-namespace:UI"
+        xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        Title="TabWindowAdmin" Height="512.338" Width="782.649">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="422" Margin="-3,-1,0,-0.333" VerticalAlignment="Top" Width="796">
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+        <TabControl HorizontalAlignment="Left" Height="483" Margin="-3,-1,-29,0" VerticalAlignment="Top" Width="807">
+            <TabItem Header="News">
+                <Grid Background="#FFE5E5E5" Margin="0,0,30,0">
+                    <RichTextBox x:Name="rtb_eventOne" HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="NewsFeed"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="269,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible" TextChanged="RichTextBox_TextChanged">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="NewsFeed"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="520,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                        VerticalScrollBarVisibility="Visible">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="NewsFeed"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0" Click="BtnClickOpretEvent"/>
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="15,336,0,0" VerticalAlignment="Top" Width="237">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="Kommentar Felt"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="520,336,0,0" VerticalAlignment="Top" Width="237">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="Kommentar Felt"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox HorizontalAlignment="Left" Height="100" Margin="269,336,0,0" VerticalAlignment="Top" Width="237">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="Kommentar Felt"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="15,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="158,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="158,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter"/>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="269,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment2"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="401,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet2"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="663,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter2"/>
+                    <Button Content="Kommenter" HorizontalAlignment="Left" Margin="520,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment3"/>
+                    <Button Content="Slet Event" HorizontalAlignment="Left" Margin="663,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet3"/>
+                    <Button Content="Vagter" HorizontalAlignment="Left" Margin="401,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter3"/>
+                    <Button Content="-->" HorizontalAlignment="Left" Margin="682,16,0,0" VerticalAlignment="Top" Width="56"/>
+                    <Button Content="&lt;--" HorizontalAlignment="Left" Margin="626,16,0,0" VerticalAlignment="Top" Width="56"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Event">
                 <Grid Background="#FFE5E5E5">
-                    <ListView HorizontalAlignment="Left" Height="234" Margin="114,97,0,0" VerticalAlignment="Top" Width="461">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
+                    <RichTextBox Name="EventTxtBox"  HorizontalAlignment="Left" Height="100" Margin="40,40,0,0" VerticalAlignment="Top" Width="300">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="Event"/>
+
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+
+                    <CheckBox Name="CheckEvent" Content="Accepter" HorizontalAlignment="Left" Margin="265,120,0,0" VerticalAlignment="Top"/>
+                    <Button Name="SletEventBtn" Content="x" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Width="20"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Vagt">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="145*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame Content="Begivenhed - Dag 1" HorizontalAlignment="Left" Height="178" VerticalAlignment="Top" Width="263" Margin="35.241,116,0,0" Grid.Column="1"/>
+                    <Label Content="14:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="12:00" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="3.711,6.577" Margin="57.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="16:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="18:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="20:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,264,0,0" Grid.Column="1"/>
+                    <Label Content="10:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57.241,134,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,134,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="206.241,264,0,0" Grid.Column="1"/>
+                    <ScrollBar HorizontalAlignment="Left" Margin="281.241,116,0,0" VerticalAlignment="Top" Height="178" Grid.Column="1" Width="17"/>
+                    <Frame Content="Begivenhed - Dag 1" HorizontalAlignment="Left" Height="178" VerticalAlignment="Top" Width="263" Margin="377.241,112,0,0" Grid.Column="1"/>
+                    <ScrollBar HorizontalAlignment="Left" Margin="623.241,112,0,0" VerticalAlignment="Top" Height="178" Grid.Column="1" Width="17"/>
+                    <Label Content="10:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,134,0,0" RenderTransformOrigin="0.421,-0.462" Grid.Column="1"/>
+                    <Label Content="Vagt 1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,134,0,0" Grid.Column="1"/>
+                    <Label Content="12:00" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="3.711,6.577" Margin="397.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="14:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="16:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="18:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="20:00" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397.241,264,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,160,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,186,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,212,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,238,0,0" Grid.Column="1"/>
+                    <Label Content="Vagt 6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="553.241,264,0,0" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Statistik">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="97*"/>
+                        <ColumnDefinition Width="693*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content= "Frivillige" FontSize="15" HorizontalAlignment="Left" Margin="56,79,0,0" VerticalAlignment="Top" Width="80" Grid.ColumnSpan="2"/>
+                    <Label Content="Aktive" FontSize="15"  HorizontalAlignment="Left" Margin="56,157,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="-0.041,0.528" Grid.ColumnSpan="2"/>
+                    <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="44,84,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.535,1.713" Grid.Column="1"/>
+                    <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="44,162,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" RenderTransformOrigin="0.535,1.562" Grid.Column="1"/>
+                    <Grid Grid.ColumnSpan="2">
+                        <Grid.Resources>
+                            <local:StatistikCollection x:Key="StatistikCollection"/>
+                        </Grid.Resources>
+                        <DVC:Chart Title="Statistik" Canvas.Top="80" Canvas.Left="10" Name="mcChart" Width="400" Height="250" Background="LightSteelBlue" Margin="359,45,31,99">
+                            <DVC:Chart.Series>
+                                <DVC:PieSeries Title="Experience" ItemsSource="{StaticResource StatistikCollection}" IndependentValueBinding="{Binding Path=Name}" DependentValueBinding="{Binding Path=Share}">
+                                </DVC:PieSeries>
+                            </DVC:Chart.Series>
+                        </DVC:Chart>
+                    </Grid>
                 </Grid>
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>
