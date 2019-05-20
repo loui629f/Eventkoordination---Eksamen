@@ -12,33 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace UI
+namespace Eventkoordination___Eksamen
 {
     /// <summary>
-    /// Interaction logic for OpretEvent.xaml
+    /// Interaction logic for Calendar.xaml
     /// </summary>
-    public partial class OpretEvent : Window
+    public partial class Calendar : Window
     {
-        public OpretEvent()
+        public Calendar()
         {
             InitializeComponent();
         }
 
-        private void BtnClickEmail(object sender, RoutedEventArgs e)
+        private void ButtonClickLuk (object sender, RoutedEventArgs e)
         {
-            
-        }
 
-        private void BtnClickAnnuller(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnClickLuk(object sender, RoutedEventArgs e)
-        {
             this.Close();
         }
-
-       
     }
 }

@@ -25,14 +25,14 @@ namespace UI
     public partial class TabWindowAdmin : Window
     {
 
-		DBController dbcon = new DBController();
-		public EventRepository EventRepository { get; set; }
+		public Controller controller = new Controller();
+		public EventRepository EventRepository = new EventRepository();
 
 
 		public TabWindowAdmin()
         {
             InitializeComponent();
-			this.EventRepository = dbcon.ShowNotConfirmedEvent();
+			this.EventRepository = controller.ShowNotConfirmedEvent();
 			rtb_eventOne.Document.Blocks.Clear();
 			rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
 				$"EventId: {this.EventRepository.GetId(0)}/nEventName: {this.EventRepository.GetName(0)}" +
