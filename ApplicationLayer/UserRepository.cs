@@ -10,5 +10,10 @@ namespace ApplicationLayer
     class UserRepository
     {
 		public List<User> Users { get; private set; } = new List<User>();
+
+		public void Add(User user)
+		{
+			Users.Add(user);
+		}
 	}
 }

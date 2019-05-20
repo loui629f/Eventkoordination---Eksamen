@@ -10,5 +10,10 @@ namespace ApplicationLayer
     class ShiftRepository
     {
 		public List<Shift> Shifts { get; private set; } = new List<Shift>();
+
+		public void Add(Shift shift)
+		{
+			Shifts.Add(shift);
+		}
 	}
 }

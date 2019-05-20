@@ -13,9 +13,9 @@ namespace ApplicationLayer
         
 	
         
-		public void Add(Event e)
+		public void Add(Event newEvent)
 		{
-			Events.Add(e);
+			Events.Add(newEvent);
 		}
 		public int GetId(int index)
 		{
