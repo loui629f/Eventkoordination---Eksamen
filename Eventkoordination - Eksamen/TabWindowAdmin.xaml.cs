@@ -25,24 +25,24 @@ namespace UI
     public partial class TabWindowAdmin : Window
     {
 
-		DBController dbcon = new DBController();
-		public EventRepository EventRepository { get; set; }
+		public Controller controller = new Controller();
+		public EventRepository EventRepository = new EventRepository();
 
 
 		public TabWindowAdmin()
         {
             InitializeComponent();
+			this.EventRepository = controller.ShowNotConfirmedEvent();
+			rtb_eventOne.Document.Blocks.Clear();
+			rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
+				$"EventId: {this.EventRepository.GetId(0)}/nEventName: {this.EventRepository.GetName(0)}" +
+	$"/nEventDate: {this.EventRepository.GetDate(0).ToString()} /nEventDescription: {this.EventRepository.GetDescription(0)}")));
 
-            this.EventRepository = dbcon.ShowNotConfirmedEvent();
-            rtb_eventOne.Document.Blocks.Clear();
-            rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
-                $"EventId: {this.EventRepository.GetId(0)} /nEventName: {this.EventRepository.GetName(0)}" +
-                $"/nEventDate: {this.EventRepository.GetDate(0).ToString()} /nEventDescription: {this.EventRepository.GetDescription(0)}")));
 
 
 
         }
-        private void RichTextBox_TextChanged(object sender, EventArgs e)
+		private void RichTextBox_TextChanged(object sender, EventArgs e)
 		{
 			
 		}
@@ -91,21 +91,12 @@ namespace UI
         }
         private void BtnClickKomment3(object sender, RoutedEventArgs e)
         {
-           
-        }
-
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
         }
 
-        private void CalendarButton_Click(object sender, RoutedEventArgs e)
-        {
-            Calendar kalender = new Calendar();
-            kalender.Show();
-        }
-    }
-    public class Statistik
+
+	}
+	public class Statistik
     {
         public string Name { get; set; }
         public Int16 Share { get; set; }

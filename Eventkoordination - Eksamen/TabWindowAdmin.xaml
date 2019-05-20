@@ -8,10 +8,10 @@
         xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         Title="TabWindowAdmin" Height="512.338" Width="782.649">
     <Grid>
-        <TabControl HorizontalAlignment="Left" Height="482" Margin="-3,0,0,-1" VerticalAlignment="Top" Width="778">
+        <TabControl HorizontalAlignment="Left" Height="483" Margin="-3,-1,-29,0" VerticalAlignment="Top" Width="807">
             <TabItem Header="News">
                 <Grid Background="#FFE5E5E5" Margin="0,0,30,0">
-                    <RichTextBox  x:Name="rtb_eventOne" HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                    <RichTextBox x:Name="rtb_eventOne" HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
                         VerticalScrollBarVisibility="Visible">
                         <FlowDocument>
                             <Paragraph>
@@ -35,7 +35,7 @@
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,11,0,0" Click="BtnClickOpretEvent"/>
+                    <Button Content="Opret Event" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="62,10,0,0" Click="BtnClickOpretEvent"/>
                     <RichTextBox HorizontalAlignment="Left" Height="100" Margin="15,336,0,0" VerticalAlignment="Top" Width="237">
                         <FlowDocument>
                             <Paragraph>
@@ -66,9 +66,8 @@
                     <Button Content="Kommenter" HorizontalAlignment="Left" Margin="520,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment3"/>
                     <Button Content="Slet Event" HorizontalAlignment="Left" Margin="663,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet3"/>
                     <Button Content="Vagter" HorizontalAlignment="Left" Margin="401,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter3"/>
-                    <Button Content="-->" HorizontalAlignment="Left" Margin="682,16,0,0" VerticalAlignment="Top" Width="56"/>
-                    <Button Content="&lt;--" HorizontalAlignment="Left" Margin="626,16,0,0" VerticalAlignment="Top" Width="56"/>
-                    <Button x:Name="Calendar" Content="Kalender" HorizontalAlignment="Left" Margin="158,11,0,0" VerticalAlignment="Top" Width="75" Click="CalendarButton_Click"/>
+                    
+                    
                 </Grid>
             </TabItem>
             <TabItem Header="Event">
@@ -137,11 +136,7 @@
                         <Grid.Resources>
                             <local:StatistikCollection x:Key="StatistikCollection"/>
                         </Grid.Resources>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="22*"/>
-                            <ColumnDefinition Width="779*"/>
-                        </Grid.ColumnDefinitions>
-                        <DVC:Chart Title="Statistik" Name="mcChart" Width="400" Height="250" Background="LightSteelBlue" Margin="342,76,37,129" Grid.Column="1">
+                        <DVC:Chart Title="Statistik" Canvas.Top="80" Canvas.Left="10" Name="mcChart" Width="400" Height="250" Background="LightSteelBlue" Margin="359,45,31,99">
                             <DVC:Chart.Series>
                                 <DVC:PieSeries Title="Experience" ItemsSource="{StaticResource StatistikCollection}" IndependentValueBinding="{Binding Path=Name}" DependentValueBinding="{Binding Path=Share}">
                                 </DVC:PieSeries>

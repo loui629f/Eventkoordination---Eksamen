@@ -17,7 +17,7 @@ namespace ApplicationLayer
         private EventRepository eventRepo = new EventRepository();
 
 
-        public void CreateEventAdmin(int eventId, string eventName, DateTime eventDate, string eventDescription, bool eventConfirmed)
+        public void CreateEventAdmin(int eventId, string eventName, DateTime eventDate, string eventDescription)
         {
 
             Event newEvent = new Event(eventId, eventName, eventDate, eventDescription);
@@ -63,14 +63,14 @@ namespace ApplicationLayer
 					SqlCommand showNotConfirmedEvent = new SqlCommand("spSelectNotConfirmedEvents", con);
 					showNotConfirmedEvent.CommandType = CommandType.StoredProcedure;
 					EventRepository eventRepository = new EventRepository();
-					Event e;
+					Event newEvent;
 					SqlDataReader showNotConfirmedEventReader = showNotConfirmedEvent.ExecuteReader();
 
 					if (showNotConfirmedEventReader.HasRows)
 					{
 						while (showNotConfirmedEventReader.Read())
 						{
-							e = new Event
+							newEvent = new Event
 							{
 								EventId = Convert.ToInt32(showNotConfirmedEventReader["EventId"].ToString()),
 								EventName = showNotConfirmedEventReader["EventName"].ToString(),
@@ -78,15 +78,15 @@ namespace ApplicationLayer
 								EventDescription = showNotConfirmedEventReader["EventDescription"].ToString()
 							};
 
-							eventRepository.Add(e);
+							eventRepository.Add(newEvent);
 							
 						}
 					}
 					return eventRepository;
 				}
-				catch(Exception e)
+				catch(Exception exception)
 				{
-					throw e;
+					throw exception;
 				}
 
             }
