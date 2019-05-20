@@ -32,11 +32,11 @@ namespace UI
 		public TabWindowAdmin()
         {
             InitializeComponent();
-			this.EventRepository = controller.ShowNotConfirmedEvent();
+			EventRepository = controller.ShowNotConfirmedEvent();
 			rtb_eventOne.Document.Blocks.Clear();
 			rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
-				$"EventId: {this.EventRepository.GetId(0)}/nEventName: {this.EventRepository.GetName(0)}" +
-	$"/nEventDate: {this.EventRepository.GetDate(0).ToString()} /nEventDescription: {this.EventRepository.GetDescription(0)}")));
+				$"EventId: {EventRepository.GetId(0)}/nEventName: {EventRepository.GetName(0)}" +
+	$"/nEventDate: {EventRepository.GetDate(0).ToString()} /nEventDescription: {EventRepository.GetDescription(0)}")));
 
 
 
