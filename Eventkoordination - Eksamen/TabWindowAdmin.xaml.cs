@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 using System.Windows.Controls.DataVisualization;
 using System.Windows.Controls.DataVisualization.Charting;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Windows.Forms;
-
+using ApplicationLayer;
 
 
 namespace UI
@@ -27,23 +25,28 @@ namespace UI
     public partial class TabWindowAdmin : Window
     {
 
+		DBController dbcon = new DBController();
+		public EventRepository EventRepository { get; set; }
 
 
-        public TabWindowAdmin()
+		public TabWindowAdmin()
         {
             InitializeComponent();
+			this.EventRepository = dbcon.ShowNotConfirmedEvent();
+			rtb_eventOne.Document.Blocks.Clear();
+			rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
+				$"EventId: {this.EventRepository.GetId(0)}/nEventName: {this.EventRepository.GetName(0)}" +
+	$"/nEventDate: {this.EventRepository.GetDate(0).ToString()} /nEventDescription: {this.EventRepository.GetDescription(0)}")));
 
-            /*string test = "test";
-            Newsfeed1.Resources.Source = null;
-            // Newsfeed1.ClearValue(Newsfeed1.Resources.Clear);
-            
-            Newsfeed1.AppendText(test);
-            */
+
 
 
         }
-
-        private void BtnClickSlet(object sender, RoutedEventArgs e)
+		private void RichTextBox_TextChanged(object sender, EventArgs e)
+		{
+			
+		}
+		private void BtnClickSlet(object sender, RoutedEventArgs e)
         {
             SletEvent sletEvent = new SletEvent();
             sletEvent.Show();
@@ -91,85 +94,9 @@ namespace UI
 
         }
 
-        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-             
-        }
 
-
-        
-
-        
-
-
-
-
-        /*private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.InitialDirectory = "C:\\Users\\Kasper\\Desktop\\Eventkoordination---Eksamen\\EventLibrary\\NewsFeed1TextFile.txt";
-            dlg.Filter = "text file(NewsFeed1TextFile.txt)|NewsFeed1TextFile.txt|All Files (NewsFeed1TextFile.NewsFeed1TextFile)|NewsFeed1TextFile.NewsFeed1TextFile";
-            dlg.RestoreDirectory = true;
-            if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                LoadTextDocument(dlg.FileName);
-            }
-        }
-        private void LoadTextDocument(string filename)
-        {
-            TextRange range;
-            FileStream fStream;
-            if (File.Exists(filename))
-            {
-                range = new TextRange(Newsfeed1.Document.ContentStart, Newsfeed1.Document.ContentEnd);
-                fStream = new FileStream(filename, FileMode.OpenOrCreate);
-                range.Load(fStream, System.Windows.DataFormats.Text);
-                fStream.Close();
-            }
-        }*/
-
-       /* string ConvertRichTextBoxContentToString(System.Windows.Controls.RichTextBox Newsfeed1 )
-        { 
-            TextRange textRange = new TextRange(Newsfeed1.Document.ContentStart, Newsfeed1.Document.ContentEnd);
-            return textRange.Text;
-        }
-        */
-
-        private void RefreshBtnClick(object sender, RoutedEventArgs e)
-        {
-            TextReader reader = new StreamReader(@"C:\Users\Nicolai Mogensen\Desktop\Eventkoordination---Eksamen\EventLibrary\NewsFeed1TextFile.txt");
-            Newsfeed1.AppendText = reader.ReadToEnd();
-            reader.Close();
-        }
-
-        /*private void textbox1(object sender, EventArgs e)
-        {
-            string a = "";
-            string abe = "abe";
-            string ble = "ble";
-            int frm = 0;
-            int to = 10;
-            ArrayList arr = new ArrayList();
-            for (int i = frm; i <= to; i++)
-            {
-                a = abe + i + ble;
-                arr.Add(a);
-            }
-
-            foreach ( string s in arr)
-            {
-                Newsfeed1.AppendText += s + Environment.NewLine;
-            }
-        }*/
-
-        /*private void GetNewsfeedText()
-        {
-            Controller c = new controller();
-
-            List<string> infos = c.GetTextBoxDataFromDatabase();
-        }*/
-    }
-    public class Statistik
+	}
+	public class Statistik
     {
         public string Name { get; set; }
         public Int16 Share { get; set; }
