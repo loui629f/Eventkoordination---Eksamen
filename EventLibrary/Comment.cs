@@ -8,6 +8,9 @@ namespace DomainLayer
 { 
     public class Comment
     {
+		public int CommentId { get; set; }
+		public string UserEmail { get; set; }
+		public string CommentUser { get; set; }
 
     }
    
