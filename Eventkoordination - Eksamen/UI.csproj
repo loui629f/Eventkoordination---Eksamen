@@ -68,9 +68,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ShowCalendar.xaml.cs">
-      <DependentUpon>ShowCalendar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="OpretEvent.xaml.cs">
       <DependentUpon>OpretEvent.xaml</DependentUpon>
     </Compile>
@@ -83,10 +80,6 @@
     <Compile Include="Vagt.xaml.cs">
       <DependentUpon>Vagt.xaml</DependentUpon>
     </Compile>
-    <Page Include="ShowCalendar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

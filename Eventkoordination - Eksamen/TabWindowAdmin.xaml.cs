@@ -99,11 +99,7 @@ namespace UI
 
         }
 
-        private void BtnClickKalender(object sender, RoutedEventArgs e)
-        {
-
-            
-        }
+       
 
 
 
