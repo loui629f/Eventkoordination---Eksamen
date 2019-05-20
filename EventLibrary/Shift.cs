@@ -8,6 +8,11 @@ namespace DomainLayer
 {
   public class Shift
   {
+		public int ShiftId { get; set; }
+		public int EventId { get; set; }
+		public string UserEmail { get; set; }
+		public DateTime ShiftDate { get; set; }
+		public string ShiftType { get; set; }
 
   }
 
