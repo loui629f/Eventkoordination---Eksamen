@@ -27,7 +27,7 @@ namespace ApplicationLayer
 		}
 		public DateTime GetDate(int index)
 		{
-			return Events[index].EventDate;
+            return Events[index].EventDate;
 		}
 		public string GetDescription(int index)
 		{
