@@ -110,15 +110,18 @@ namespace UI
 
 				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
 			}
+			else
+			{
+				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
+			}
 		}
 
-       
-
-
-
-
-    }
-    public class Statistik
+		private void DatePickerInvoke_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
+	}
+	public class Statistik
     {
         public string Name { get; set; }
         public Int16 Share { get; set; }
