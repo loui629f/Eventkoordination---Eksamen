@@ -11,7 +11,7 @@
         <TabControl HorizontalAlignment="Left" Height="483" Margin="-3,-1,-29,0" VerticalAlignment="Top" Width="807">
             <TabItem Header="News">
                 <Grid Background="#FFE5E5E5" Margin="0,0,30,0">
-                    <RichTextBox x:Name="rtb_eventOne" HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                    <RichTextBox Name="LastEvent" HorizontalAlignment="Left" Height="254" Margin="15,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
                         VerticalScrollBarVisibility="Visible">
                         <FlowDocument>
                             <Paragraph>
@@ -19,7 +19,7 @@
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="269,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                    <RichTextBox Name="CurrentEvent" HorizontalAlignment="Left" Height="254" Margin="269,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
                         VerticalScrollBarVisibility="Visible" TextChanged="RichTextBox_TextChanged">
                         <FlowDocument>
                             <Paragraph>
@@ -27,7 +27,7 @@
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <RichTextBox HorizontalAlignment="Left" Height="254" Margin="520,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
+                    <RichTextBox Name="NextEvent" HorizontalAlignment="Left" Height="254" Margin="520,50,0,0" VerticalAlignment="Top" Width="237" HorizontalScrollBarVisibility="Visible"
                         VerticalScrollBarVisibility="Visible">
                         <FlowDocument>
                             <Paragraph>
@@ -66,7 +66,7 @@
                     <Button Content="Kommenter" HorizontalAlignment="Left" Margin="520,309,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickKomment3"/>
                     <Button Content="Slet Event" HorizontalAlignment="Left" Margin="663,50,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickSlet3"/>
                     <Button Content="Vagter" HorizontalAlignment="Left" Margin="401,262,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickVagter3"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="158,8,0,0" VerticalAlignment="Top"/>
+                    <DatePicker Name="NewsfeedDatePicker" HorizontalAlignment="Left" Margin="158,8,0,0" VerticalAlignment="Top"/>
 
 
                 </Grid>

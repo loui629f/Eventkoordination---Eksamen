@@ -32,13 +32,6 @@ namespace UI
 		public TabWindowAdmin()
         {
             InitializeComponent();
-			EventRepository = controller.ShowNotConfirmedEvent();
-			rtb_eventOne.Document.Blocks.Clear();
-			rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
-				$"EventId: {EventRepository.GetId(0)}/nEventName: {EventRepository.GetName(0)}" +
-	$"/nEventDate: {EventRepository.GetDate(0).ToString()} /nEventDescription: {EventRepository.GetDescription(0)}")));
-
-
 
 
         }
@@ -98,6 +91,21 @@ namespace UI
         {
 
         }
+
+		private void NewsfeddDatePicker_SelectedDatesChanged(object sender, RoutedEventArgs e)
+		{
+			if (NewsfeedDatePicker.SelectedDate.Equals(EventRepository.))
+			{
+
+			}
+
+			EventRepository = controller.ShowNotConfirmedEvent();
+			CurrentEvent.Document.Blocks.Clear();
+
+			CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(
+				$"EventId: {EventRepository.GetId(0)}/nEventName: {EventRepository.GetName(0)}" +
+				$"/nEventDate: {EventRepository.GetDate(0).ToString()} /nEventDescription: {EventRepository.GetDescription(0)}")));
+		}
 
        
 
