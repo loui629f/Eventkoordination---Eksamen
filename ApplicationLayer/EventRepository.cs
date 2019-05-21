@@ -18,9 +18,9 @@ namespace ApplicationLayer
 			Events.Add(newEvent);
 		}
 
-		public void GetDate()
+		public string GetDate()
 		{
-			Event.
+			return Events.OfType<DateTime>().ToString();
 		}
 
 	}

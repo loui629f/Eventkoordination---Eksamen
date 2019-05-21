@@ -92,19 +92,24 @@ namespace UI
 
         }
 
-		private void NewsfeddDatePicker_SelectedDatesChanged(object sender, RoutedEventArgs e)
+		private void NewsfeeDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
 		{
-			if (NewsfeedDatePicker.SelectedDate.Equals(EventRepository.))
+			EventRepository eventRepo = new EventRepository();
+
+			string d;
+			string s;
+
+
+			d = NewsfeedDatePicker.SelectedDate.ToString();
+			s = eventRepo.GetDate();
+
+			if (d.Equals(s))
 			{
+				EventRepository = controller.ShowNotConfirmedEvent();
+				CurrentEvent.Document.Blocks.Clear();
 
+				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
 			}
-
-			EventRepository = controller.ShowNotConfirmedEvent();
-			CurrentEvent.Document.Blocks.Clear();
-
-			CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(
-				$"EventId: {EventRepository.GetId(0)}/nEventName: {EventRepository.GetName(0)}" +
-				$"/nEventDate: {EventRepository.GetDate(0).ToString()} /nEventDescription: {EventRepository.GetDescription(0)}")));
 		}
 
        
