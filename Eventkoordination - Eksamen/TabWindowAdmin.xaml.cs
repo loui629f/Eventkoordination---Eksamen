@@ -26,6 +26,7 @@ namespace UI
     {
 
 		public Controller controller = new Controller();
+		
 		public EventRepository EventRepository = new EventRepository();
 
 
@@ -94,33 +95,31 @@ namespace UI
 
 		private void NewsfeedDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
 		{
-			EventRepository eventRepo = new EventRepository();
+			EventRepository eventRepo = controller.ShowNotConfirmedEvent();
+			
 
 			string d;
-			string s;
+			string bla;
 			d = NewsfeedDatePicker.SelectedDate.ToString();
 
 			foreach(string st in eventRepo.GetDate())
 			{
-				while (d.Equals(st))
+
+				if (st == d)
 				{
 					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
 				}
+				else
+				{
+					CurrentEvent.Document.Blocks.Clear();
+				}
+				bla = st;
+				
 
 
 			}
 
-				//if (d.Equals(s))
-				//{
-				//	EventRepository = controller.ShowNotConfirmedEvent();
-				//	CurrentEvent.Document.Blocks.Clear();
 
-				//	CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
-				//}
-				//else
-				//{
-				//	CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hejsa")));
-				//}
 			
 		}
 

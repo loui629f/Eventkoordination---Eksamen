@@ -8,7 +8,7 @@ namespace ApplicationLayer
 {
     public class Controller
     {
-		private DBController dbcon = new DBController();
+		public DBController dbcon = new DBController();
 		private EventRepository eventRepo = new EventRepository();
 
 		public void CreateEventAdmin(int eventId, string eventName, DateTime eventDate, string eventDescription)
@@ -18,7 +18,7 @@ namespace ApplicationLayer
 
 		public EventRepository ShowNotConfirmedEvent()
 		{
-			dbcon.ShowNotConfirmedEvent();
+			eventRepo = dbcon.ShowNotConfirmedEvent();
 			return eventRepo;
 			
 		}
