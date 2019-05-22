@@ -92,34 +92,38 @@ namespace UI
 
         }
 
-		private void NewsfeeDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+		private void NewsfeedDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
 		{
 			EventRepository eventRepo = new EventRepository();
 
 			string d;
 			string s;
-
-
 			d = NewsfeedDatePicker.SelectedDate.ToString();
-			s = eventRepo.GetDate();
 
-			if (d.Equals(s))
+			foreach(string st in eventRepo.GetDate())
 			{
-				EventRepository = controller.ShowNotConfirmedEvent();
-				CurrentEvent.Document.Blocks.Clear();
+				while (d.Equals(st))
+				{
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
+				}
 
-				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
-			}
-			else
-			{
-				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
-			}
-		}
 
-		private void DatePickerInvoke_Click(object sender, RoutedEventArgs e)
-		{
+			}
+
+				//if (d.Equals(s))
+				//{
+				//	EventRepository = controller.ShowNotConfirmedEvent();
+				//	CurrentEvent.Document.Blocks.Clear();
+
+				//	CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
+				//}
+				//else
+				//{
+				//	CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hejsa")));
+				//}
 			
 		}
+
 	}
 	public class Statistik
     {

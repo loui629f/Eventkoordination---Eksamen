@@ -18,9 +18,14 @@ namespace ApplicationLayer
 			Events.Add(newEvent);
 		}
 
-		public string GetDate()
+		public List<string> GetDate()
 		{
-			return Events.OfType<DateTime>().ToString();
+			List<string> DateOfEvents = new List<string>();
+			foreach (Event events in Events)
+			{
+				DateOfEvents.Add(events.EventDate.ToString());
+			}
+			return DateOfEvents;
 		}
 
 	}
