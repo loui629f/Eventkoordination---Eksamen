@@ -96,33 +96,32 @@ namespace UI
 		private void NewsfeedDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
 		{
 			EventRepository eventRepo = controller.ShowNotConfirmedEvent();
-			
+
 
 			string d;
 			string bla;
 			d = NewsfeedDatePicker.SelectedDate.ToString();
+			eventRepo.GetDate();
 
-			foreach(string st in eventRepo.GetDate())
+			for (int i = 0; i < eventRepo.GetCount(); i++)
+		
 			{
 
-				if (st == d)
+				if (eventRepo.GetDate().Contains(d))
 				{
-					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventName(d.ToString()))));
+
 				}
 				else
 				{
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("Ingen begivenheder fundet")));
 					CurrentEvent.Document.Blocks.Clear();
 				}
-				bla = st;
-				
-
 
 			}
-
-
-			
 		}
 
+			
 	}
 	public class Statistik
     {
