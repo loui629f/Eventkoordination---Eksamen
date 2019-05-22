@@ -30,17 +30,16 @@ namespace ApplicationLayer
 			}
 			return null;
 		}
-
-		public Dictionary<DateTime, Tuple<int, string, string>> eventDateDictionary = new Dictionary<DateTime, Tuple<int, string, string>>();
-
-		public Dictionary<DateTime, Tuple<int, string, string>> AddToDictionary(Event id, Event name, Event date, Event description)
+		public string GetEventDescription(string date)
 		{
-			if (!eventDateDictionary.ContainsKey(date.EventDate))
+			foreach (Event item in Events)
 			{
-				eventDateDictionary.Add(date.EventDate, new Tuple<int, string, string>(id.EventId, name.EventName, description.EventDescription ));
+				if (item.EventDate.ToString() == date)
+				{
+					return item.EventDescription;
+				}
 			}
-			return eventDateDictionary;
-
+			return null;
 		}
 
 
@@ -50,12 +49,6 @@ namespace ApplicationLayer
 
 		public List<string> GetDate()
 		{
-
-
-
-
-
-
 
 			List<string> DateOfEvents = new List<string>();
 			foreach (Event events in Events)

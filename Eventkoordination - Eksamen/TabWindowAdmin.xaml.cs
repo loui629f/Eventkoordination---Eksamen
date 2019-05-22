@@ -102,20 +102,21 @@ namespace UI
 			string bla;
 			d = NewsfeedDatePicker.SelectedDate.ToString();
 			eventRepo.GetDate();
+			CurrentEvent.Document.Blocks.Clear();
 
-			for (int i = 0; i < eventRepo.GetCount(); i++)
-		
+			for (int i = 0; i < eventRepo.GetCount(); i++)		
 			{
 
 				if (eventRepo.GetDate().Contains(d))
 				{
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(d)));
 					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventName(d.ToString()))));
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventDescription(d.ToString()))));
+					if (eventRepo.GetDate().Contains(d))
+					{
+						break;
+					}
 
-				}
-				else
-				{
-					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("Ingen begivenheder fundet")));
-					CurrentEvent.Document.Blocks.Clear();
 				}
 
 			}
