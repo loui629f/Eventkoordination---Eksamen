@@ -17,21 +17,10 @@ namespace ApplicationLayer
 		{
 			Events.Add(newEvent);
 		}
-		public int GetId(int index)
+
+		public string GetDate()
 		{
-			return Events[index].EventId;
-		}
-		public string GetName(int index)
-		{
-			return Events[index].EventName;
-		}
-		public DateTime GetDate(int index)
-		{
-            return Events[index].EventDate;
-		}
-		public string GetDescription(int index)
-		{
-			return Events[index].EventDescription;
+			return Events.OfType<DateTime>().ToString();
 		}
 
 	}

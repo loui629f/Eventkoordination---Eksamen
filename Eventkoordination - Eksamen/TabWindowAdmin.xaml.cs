@@ -32,13 +32,6 @@ namespace UI
 		public TabWindowAdmin()
         {
             InitializeComponent();
-			EventRepository = controller.ShowNotConfirmedEvent();
-			rtb_eventOne.Document.Blocks.Clear();
-			rtb_eventOne.Document.Blocks.Add(new Paragraph(new Run(
-				$"EventId: {EventRepository.GetId(0)}/nEventName: {EventRepository.GetName(0)}" +
-	$"/nEventDate: {EventRepository.GetDate(0).ToString()} /nEventDescription: {EventRepository.GetDescription(0)}")));
-
-
 
 
         }
@@ -99,13 +92,36 @@ namespace UI
 
         }
 
-       
+		private void NewsfeeDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+		{
+			EventRepository eventRepo = new EventRepository();
+
+			string d;
+			string s;
 
 
+			d = NewsfeedDatePicker.SelectedDate.ToString();
+			s = eventRepo.GetDate();
 
+			if (d.Equals(s))
+			{
+				EventRepository = controller.ShowNotConfirmedEvent();
+				CurrentEvent.Document.Blocks.Clear();
 
-    }
-    public class Statistik
+				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
+			}
+			else
+			{
+				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
+			}
+		}
+
+		private void DatePickerInvoke_Click(object sender, RoutedEventArgs e)
+		{
+			
+		}
+	}
+	public class Statistik
     {
         public string Name { get; set; }
         public Int16 Share { get; set; }
