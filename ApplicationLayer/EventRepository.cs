@@ -17,10 +17,45 @@ namespace ApplicationLayer
 		{
 			Events.Add(newEvent);
 		}
-
-		public string GetDate()
+		public int GetCount() => Events.Count;
+		public string GetEventName(string date)
 		{
-			return Events.OfType<DateTime>().ToString();
+			foreach (Event item in Events)
+			{
+				if (item.EventDate.ToString() == date)
+				{
+					return item.EventName;
+				}
+				
+			}
+			return null;
+		}
+		public string GetEventDescription(string date)
+		{
+			foreach (Event item in Events)
+			{
+				if (item.EventDate.ToString() == date)
+				{
+					return item.EventDescription;
+				}
+			}
+			return null;
+		}
+
+
+
+
+
+
+		public List<string> GetDate()
+		{
+
+			List<string> DateOfEvents = new List<string>();
+			foreach (Event events in Events)
+			{
+				DateOfEvents.Add(events.EventDate.ToString());
+			}
+			return DateOfEvents;
 		}
 
 	}

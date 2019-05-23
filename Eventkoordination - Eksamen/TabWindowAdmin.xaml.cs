@@ -26,6 +26,7 @@ namespace UI
     {
 
 		public Controller controller = new Controller();
+		
 		public EventRepository EventRepository = new EventRepository();
 
 
@@ -92,34 +93,36 @@ namespace UI
 
         }
 
-		private void NewsfeeDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+		private void NewsfeedDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
 		{
-			EventRepository eventRepo = new EventRepository();
+			EventRepository eventRepo = controller.ShowNotConfirmedEvent();
+
 
 			string d;
-			string s;
-
-
+			string bla;
 			d = NewsfeedDatePicker.SelectedDate.ToString();
-			s = eventRepo.GetDate();
+			eventRepo.GetDate();
+			CurrentEvent.Document.Blocks.Clear();
 
-			if (d.Equals(s))
+			for (int i = 0; i < eventRepo.GetCount(); i++)		
 			{
-				EventRepository = controller.ShowNotConfirmedEvent();
-				CurrentEvent.Document.Blocks.Clear();
 
-				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
-			}
-			else
-			{
-				CurrentEvent.Document.Blocks.Add(new Paragraph(new Run("hej")));
+				if (eventRepo.GetDate().Contains(d))
+				{
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(d)));
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventName(d.ToString()))));
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventDescription(d.ToString()))));
+					if (eventRepo.GetDate().Contains(d))
+					{
+						break;
+					}
+
+				}
+
 			}
 		}
 
-		private void DatePickerInvoke_Click(object sender, RoutedEventArgs e)
-		{
 			
-		}
 	}
 	public class Statistik
     {
