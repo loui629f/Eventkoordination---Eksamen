@@ -17,10 +17,10 @@ namespace ApplicationLayer
 		private EventRepository eventRepo = new EventRepository();
 
 
-		public void CreateEventAdmin(int eventId, string eventName, DateTime eventDate, string eventDescription)
+		public void CreateEventAdmin(string eventName, DateTime eventDate, string eventDescription)
 		{
 
-			Event newEvent = new Event(eventId, eventName, eventDate, eventDescription);
+			Event newEvent = new Event(eventName, eventDate, eventDescription);
 
 			using (SqlConnection con = new SqlConnection(connectionString))
 			{
@@ -30,7 +30,6 @@ namespace ApplicationLayer
 
 					SqlCommand createEventAdmin = new SqlCommand("spInsertEventAdmin", con);
 					createEventAdmin.CommandType = CommandType.StoredProcedure;
-					createEventAdmin.Parameters.Add(new SqlParameter("@EventId", newEvent.EventId));
 					createEventAdmin.Parameters.Add(new SqlParameter("@EventName", newEvent.EventName));
 					createEventAdmin.Parameters.Add(new SqlParameter("@EventDate", newEvent.EventDate));
 					createEventAdmin.Parameters.Add(new SqlParameter("@EventDescription", newEvent.EventDescription));

@@ -13,10 +13,15 @@ namespace DomainLayer
         public DateTime EventDate { get; set; }
         public string EventDescription { get; set; }
 
-     
-          
 
-        public Event(int eventId, string eventName, DateTime eventDate, string eventDescription)
+		public Event(string eventName, DateTime eventDate, string eventDescription)
+		{
+			EventName = eventName;
+			EventDate = eventDate;
+			EventDescription = eventDescription;
+		}
+
+		public Event(int eventId, string eventName, DateTime eventDate, string eventDescription)
         {
             EventId = eventId;
             EventName = eventName;
@@ -24,12 +29,6 @@ namespace DomainLayer
             EventDescription = eventDescription;
         }
 
-
-        public Event()
-        {
-            
-            
-        }
-    }
+	}
     
 }

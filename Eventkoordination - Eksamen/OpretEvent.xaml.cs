@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ApplicationLayer;
 
 namespace UI
 {
@@ -19,6 +20,8 @@ namespace UI
     /// </summary>
     public partial class OpretEvent : Window
     {
+		Controller controller = new Controller();
+		
         public OpretEvent()
         {
             InitializeComponent();
@@ -26,6 +29,9 @@ namespace UI
 
         private void BtnClickEmail(object sender, RoutedEventArgs e)
         {
+
+			controller.CreateEventAdmin(TxtEventNavn.Text, Convert.ToDateTime(TxtEventDato.Text), TxtEventBeskrivelse.Text);
+
             
         }
 
