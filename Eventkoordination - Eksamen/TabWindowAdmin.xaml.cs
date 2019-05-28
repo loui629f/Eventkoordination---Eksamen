@@ -99,7 +99,6 @@ namespace UI
 
 
 			string d;
-			string bla;
 			d = NewsfeedDatePicker.SelectedDate.ToString();
 			eventRepo.GetDate();
 			CurrentEvent.Document.Blocks.Clear();
