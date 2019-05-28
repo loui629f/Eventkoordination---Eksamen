@@ -35,9 +35,12 @@
         <Button Content="Send Email" HorizontalAlignment="Left" Margin="358,349,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickEmail"/>
         <Button Content="Annuller" HorizontalAlignment="Left" Margin="465,349,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickAnnuller"/>
         <Button Content="Luk" HorizontalAlignment="Left" Margin="566,349,0,0" VerticalAlignment="Top" Width="75" Click="BtnClickLuk"/>
-        <TextBox Name="TxtEventNavn" HorizontalAlignment="Left" Height="23" Margin="56,51,0,0" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="207"/>
-        <TextBox Name="TxtEventDato" HorizontalAlignment="Left" Height="23" Margin="56,107,0,0" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="TxtEventBeskrivelse" HorizontalAlignment="Left" Height="102" Margin="56,163,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="TxtEventNavn" HorizontalAlignment="Left" Height="23" Margin="56,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox Name="TxtEventDato" HorizontalAlignment="Left" Height="23" Margin="56,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TxtEventBeskrivelse" HorizontalAlignment="Left" Height="102" Margin="56,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <Label Content="Navn på begivenhed" HorizontalAlignment="Left" Margin="56,25,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dato [mm-dd-åååå]" HorizontalAlignment="Left" Margin="56,81,0,0" VerticalAlignment="Top"/>
+        <Label Content="Beskrivelse" HorizontalAlignment="Left" Margin="56,136,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window> 

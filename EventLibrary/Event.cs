@@ -13,6 +13,11 @@ namespace DomainLayer
         public DateTime EventDate { get; set; }
         public string EventDescription { get; set; }
 
+		public Event()
+		{
+
+		}
+
 
 		public Event(string eventName, DateTime eventDate, string eventDescription)
 		{

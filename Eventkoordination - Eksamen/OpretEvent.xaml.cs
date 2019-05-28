@@ -31,6 +31,9 @@ namespace UI
         {
 
 			controller.CreateEventAdmin(TxtEventNavn.Text, Convert.ToDateTime(TxtEventDato.Text), TxtEventBeskrivelse.Text);
+			TxtEventNavn.Text = string.Empty;
+			TxtEventDato.Text = string.Empty;
+			TxtEventBeskrivelse.Text = string.Empty;
 
             
         }
@@ -45,6 +48,6 @@ namespace UI
             this.Close();
         }
 
-       
-    }
+
+	}
 }
