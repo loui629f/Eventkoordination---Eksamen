@@ -50,7 +50,7 @@ namespace ApplicationLayer
 
 
 
-		public EventRepository ShowNotConfirmedEvent()
+		public EventRepository ShowConfirmedEvent()
 		{
 
 			using (SqlConnection con = new SqlConnection(connectionString))
@@ -59,22 +59,22 @@ namespace ApplicationLayer
 				{
 					con.Open();
 
-					SqlCommand showNotConfirmedEvent = new SqlCommand("spSelectNotConfirmedEvents", con);
-					showNotConfirmedEvent.CommandType = CommandType.StoredProcedure;
+					SqlCommand showConfirmedEvent = new SqlCommand("spSelectConfirmedEvents", con);
+					showConfirmedEvent.CommandType = CommandType.StoredProcedure;
 					EventRepository eventRepository = new EventRepository();
 					Event newEvent;
-					SqlDataReader showNotConfirmedEventReader = showNotConfirmedEvent.ExecuteReader();
+					SqlDataReader showConfirmedEventReader = showConfirmedEvent.ExecuteReader();
 
-					if (showNotConfirmedEventReader.HasRows)
+					if (showConfirmedEventReader.HasRows)
 					{
-						while (showNotConfirmedEventReader.Read())
+						while (showConfirmedEventReader.Read())
 						{
 							newEvent = new Event
 							{
-								EventId = Convert.ToInt32(showNotConfirmedEventReader["EventId"].ToString()),
-								EventName = showNotConfirmedEventReader["EventName"].ToString(),
-								EventDate = Convert.ToDateTime(showNotConfirmedEventReader["EventDate"].ToString()),
-								EventDescription = showNotConfirmedEventReader["EventDescription"].ToString()
+								EventId = Convert.ToInt32(showConfirmedEventReader["EventId"].ToString()),
+								EventName = showConfirmedEventReader["EventName"].ToString(),
+								EventDate = Convert.ToDateTime(showConfirmedEventReader["EventDate"].ToString()),
+								EventDescription = showConfirmedEventReader["EventDescription"].ToString()
 							};
 
 							eventRepository.Add(newEvent);
@@ -95,42 +95,5 @@ namespace ApplicationLayer
 			}
 		}
 
-		//public EventRepository GetAllDates()
-		//{
-
-		//	using (SqlConnection con = new SqlConnection(connectionString))
-		//	{
-		//		try
-		//		{
-		//			con.Open();
-
-		//			SqlCommand getAllDates = new SqlCommand("spSelectConfirmedEvents", con);
-		//			getAllDates.CommandType = CommandType.StoredProcedure;
-		//			EventRepository eventRepository = new EventRepository();
-		//			Event newEvent;
-		//			SqlDataReader getAllDatesEventReader = getAllDates.ExecuteReader();
-
-		//			if (getAllDatesEventReader.HasRows)
-		//			{
-		//				while (getAllDatesEventReader.Read())
-		//				{
-		//					newEvent = new Event
-		//					{
-
-		//						EventDate = Convert.ToDateTime(getAllDatesEventReader["EventDate"].ToString()),
-
-		//					};
-
-		//					eventRepository.Add(newEvent);
-
-		//				}
-		//			}
-		//			return eventRepository;
-		//		}
-		//		catch (Exception exception)
-		//		{
-		//			throw exception;
-		//		}
-		//	}
 	}
 }

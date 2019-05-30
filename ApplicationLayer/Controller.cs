@@ -16,9 +16,9 @@ namespace ApplicationLayer
 			dbcon.CreateEventAdmin(eventName, eventDate, eventDescription);
 		}
 
-		public EventRepository ShowNotConfirmedEvent()
+		public EventRepository ShowConfirmedEvent()
 		{
-			eventRepo = dbcon.ShowNotConfirmedEvent();
+			eventRepo = dbcon.ShowConfirmedEvent();
 			return eventRepo;
 			
 		}

@@ -95,23 +95,23 @@ namespace UI
 
 		private void NewsfeedDatePicker_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
 		{
-			EventRepository eventRepo = controller.ShowNotConfirmedEvent();
+			EventRepository eventRepo = controller.ShowConfirmedEvent();
 
 
-			string d;
-			d = NewsfeedDatePicker.SelectedDate.ToString();
+			string date;
+			date = NewsfeedDatePicker.SelectedDate.ToString();
 			eventRepo.GetDate();
 			CurrentEvent.Document.Blocks.Clear();
 
 			for (int i = 0; i < eventRepo.GetCount(); i++)		
 			{
 
-				if (eventRepo.GetDate().Contains(d))
+				if (eventRepo.GetDate().Contains(date))
 				{
-					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(d)));
-					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventName(d.ToString()))));
-					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventDescription(d.ToString()))));
-					if (eventRepo.GetDate().Contains(d))
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(date)));
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventName(date.ToString()))));
+					CurrentEvent.Document.Blocks.Add(new Paragraph(new Run(eventRepo.GetEventDescription(date.ToString()))));
+					if (eventRepo.GetDate().Contains(date))
 					{
 						break;
 					}
